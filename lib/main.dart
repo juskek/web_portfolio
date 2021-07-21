@@ -567,7 +567,7 @@ const _t2URL = 'https://t2diary-e583f.web.app/#/home';
 const _sentecURL =
     'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6738060771831386112';
 const _cvURL =
-    'https://github.com/juskek/web_portfolio'; // TODO:H update CV amd upload to github wo contact details
+    'https://github.com/juskek/web_portfolio/raw/master/assets/Resume%20-%20Justin%20Kek_15Jul21.pdf'; // TODO:H update CV amd upload to github wo contact details
 void _launchGitHub() async => await canLaunch(_githubURL)
     ? await launch(_githubURL)
     : throw 'Could not launch $_githubURL';
