@@ -532,37 +532,39 @@ Widget _projContainer(int index) {
   );
 }
 
+// ! TO BE REMOVED
 // POPUP MENU
-Widget _jkPopupMenu() {
-  return PopupMenuButton(
-    icon: Image.asset('assets/jk_sb.png'),
-    onSelected: null,
-    elevation: 1,
-    itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-      const PopupMenuItem(
-        value: null,
-        child: Text('HOME'),
-      ),
-      const PopupMenuItem(
-        value: null,
-        child: Text('MECHANICAL PROJECTS - COMING SOON'),
-      ),
-      const PopupMenuItem(
-        value: null,
-        child: Text('SOFTWARE PROJECTS - COMING SOON'),
-      ),
-      const PopupMenuItem(
-        value: null,
-        child: Text('OTHER PROJECTS - COMING SOON'),
-      ),
-    ],
-  );
-}
+// Widget _jkPopupMenu() {
+//   return PopupMenuButton(
+//     icon: Image.asset('assets/jk_sb.png'),
+//     onSelected: null,
+//     elevation: 1,
+//     itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+//       const PopupMenuItem(
+//         value: null,
+//         child: Text('HOME'),
+//       ),
+//       const PopupMenuItem(
+//         value: null,
+//         child: Text('MECHANICAL PROJECTS - COMING SOON'),
+//       ),
+//       const PopupMenuItem(
+//         value: null,
+//         child: Text('SOFTWARE PROJECTS - COMING SOON'),
+//       ),
+//       const PopupMenuItem(
+//         value: null,
+//         child: Text('OTHER PROJECTS - COMING SOON'),
+//       ),
+//     ],
+//   );
+// }
 
 // URLs
 const _linkedinURL = 'https://www.linkedin.com/in/justinkek/';
 const _githubURL = 'https://github.com/juskek';
 const _repoURL = 'https://github.com/juskek/web_portfolio';
+const _blogURL = 'https://justinkek.medium.com/';
 const _t2URL = 'https://t2diary-e583f.web.app/#/home';
 const _sentecURL =
     'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6738060771831386112';
@@ -577,6 +579,9 @@ void _launchLinkedIn() async => await canLaunch(_linkedinURL)
 void _launchRepo() async => await canLaunch(_repoURL)
     ? await launch(_repoURL)
     : throw 'Could not launch $_repoURL';
+void _launchBlog() async => await canLaunch(_blogURL)
+    ? await launch(_blogURL)
+    : throw 'Could not launch $_blogURL';
 void _launchPage0() async => await canLaunch(_t2URL)
     ? await launch(_t2URL)
     : throw 'Could not launch $_t2URL';
@@ -775,6 +780,14 @@ Widget _customDrawer() {
             'OTHER PROJECTS - COMING SOON',
             style: Styles.smallText,
           ),
+        ),
+        ListTile(
+          leading: Icon(Icons.dashboard_outlined),
+          title: Text(
+            'BLOG',
+            style: Styles.smallText,
+          ),
+          onTap: _launchBlog,
         ),
         ListTile(
           leading: Icon(Icons.insert_link),
