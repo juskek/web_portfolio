@@ -565,6 +565,7 @@ const _linkedinURL = 'https://www.linkedin.com/in/justinkek/';
 const _githubURL = 'https://github.com/juskek';
 const _repoURL = 'https://github.com/juskek/web_portfolio';
 const _blogURL = 'https://justinkek.medium.com/';
+const _coffeeURL = 'https://www.buymeacoffee.com/justinkek';
 const _t2URL = 'https://t2diary-e583f.web.app/#/home';
 const _sentecURL =
     'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6738060771831386112';
@@ -582,6 +583,9 @@ void _launchRepo() async => await canLaunch(_repoURL)
 void _launchBlog() async => await canLaunch(_blogURL)
     ? await launch(_blogURL)
     : throw 'Could not launch $_blogURL';
+void _launchCoffee() async => await canLaunch(_coffeeURL)
+    ? await launch(_coffeeURL)
+    : throw 'Could not launch $_coffeeURL';
 void _launchPage0() async => await canLaunch(_t2URL)
     ? await launch(_t2URL)
     : throw 'Could not launch $_t2URL';
@@ -796,6 +800,14 @@ Widget _customDrawer() {
             style: Styles.smallText,
           ),
           onTap: _launchRepo,
+        ),
+        ListTile(
+          leading: Icon(Icons.coffee_outlined),
+          title: Text(
+            'BUY ME A COFFEE',
+            style: Styles.smallText,
+          ),
+          onTap: _launchCoffee,
         ),
       ],
     ),
