@@ -53,7 +53,7 @@ This repository holds my personal portfolio at [justinkek.com](justinkek.com).
     />
    ```
 5. Add link to desired preview image (1200x627) to under content.
-6. 
+6. Crawl to update LinkedIn cache at their [post inspector](https://medium.com/@Scotty_Lingner/linkedin-link-preview-images-not-showing-up-try-this-3cd80043b5bb#:~:text=https%3A//www.linkedin.com/post-inspector/inspect/)
 
 # 3. Results
 
