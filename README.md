@@ -37,7 +37,7 @@ This repository holds my personal portfolio at [justinkek.com](justinkek.com).
     <meta 
       name="image" 
       property="og:image" 
-      content="%PUBLIC_URL%/web_preview.png" 
+      content="<link>" 
     />
     <meta 
       name="author" 
@@ -52,7 +52,7 @@ This repository holds my personal portfolio at [justinkek.com](justinkek.com).
       content="https://example.com" 
     />
    ```
-5. Add desired preview image to build/web
+5. Add link to desired preview image (1200x627) to under content.
 6. 
 
 # 3. Results

@@ -22,7 +22,7 @@ void downloadFile(String url) {
 List<String> roleText = [
   "a software engineer by passion.",
   "a mechanical engineer by education.",
-  "an Imperial graduate with a MEng."
+  "an Imperial graduate with an MEng."
 ];
 int typingSpeed = 40;
 int backspaceSpeed = 10;
