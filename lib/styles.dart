@@ -4,8 +4,24 @@ abstract class Styles {
   // PADDING
   static const double smallPadding = 10;
   static const double largePadding = 30;
+
+  static const EdgeInsets smallBorderPadding = EdgeInsets.all(smallPadding);
+  static const EdgeInsets largeBorderPadding = EdgeInsets.all(largePadding);
+
+  // BORDERS
+  static Border thickBorder = Border.all(color: Styles.black, width: 4);
+  static Border thinBorder = Border.all(color: Styles.black, width: 2);
+
+  // TEXT
   static const TextStyle normalText = TextStyle(
-    color: Colors.black,
+    color: Styles.black,
+    fontSize: 20,
+    fontStyle: FontStyle.normal,
+    fontWeight: FontWeight.normal,
+    fontFamily: 'Open Sans',
+  );
+  static const TextStyle normalSubtleText = TextStyle(
+    color: Styles.gray,
     fontSize: 20,
     fontStyle: FontStyle.normal,
     fontWeight: FontWeight.normal,

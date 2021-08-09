@@ -92,7 +92,7 @@ Widget customDrawer(BuildContext context) {
             'SOFTWARE PROJECTS',
             style: Styles.smallText,
           ),
-          onTap: () => Navigator.pushNamed(context, '/softPage'),
+          onTap: () => Navigator.pushNamed(context, '/software-projects'),
         ),
         ListTile(
           leading: Icon(Icons.carpenter_outlined),
@@ -100,7 +100,7 @@ Widget customDrawer(BuildContext context) {
             'MECHANICAL PROJECTS',
             style: Styles.smallText,
           ),
-          onTap: () => Navigator.pushNamed(context, '/mechPage'),
+          onTap: () => Navigator.pushNamed(context, '/mechanical-projects'),
         ),
         ListTile(
           leading: Icon(Icons.bubble_chart_outlined),
@@ -108,7 +108,7 @@ Widget customDrawer(BuildContext context) {
             'OTHER PROJECTS',
             style: Styles.smallText,
           ),
-          onTap: () => Navigator.pushNamed(context, '/otherPage'),
+          onTap: () => Navigator.pushNamed(context, '/other-projects'),
         ),
         ListTile(
           leading: Icon(Icons.dashboard_outlined),

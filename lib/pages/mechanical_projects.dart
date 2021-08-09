@@ -13,10 +13,7 @@ class _MechPageState extends State<MechPage> {
     return Scaffold(
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
-      body: Text(
-        'MECHANICAL PROJECTS COMING SOON',
-        style: Styles.boldIntro,
-      ),
+      body: underConstruction(context),
     );
   }
 }

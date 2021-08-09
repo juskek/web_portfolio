@@ -13,10 +13,7 @@ class _OtherPageState extends State<OtherPage> {
     return Scaffold(
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
-      body: Text(
-        'OTHER PROJECTS COMING SOON',
-        style: Styles.boldIntro,
-      ),
+      body: underConstruction(context),
     );
   }
 }

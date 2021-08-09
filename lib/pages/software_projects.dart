@@ -14,10 +14,7 @@ class _SoftPageState extends State<SoftPage> {
     return Scaffold(
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
-      body: Text(
-        'SOFTWARE PROJECTS COMING SOON',
-        style: Styles.boldIntro,
-      ),
+      body: underConstruction(context),
     );
   }
 }

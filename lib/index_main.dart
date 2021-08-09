@@ -18,4 +18,5 @@ export 'package:web_portfolio/pages/home.dart';
 export 'package:web_portfolio/pages/software_projects.dart';
 export 'package:web_portfolio/pages/mechanical_projects.dart';
 export 'package:web_portfolio/pages/other_projects.dart';
-export 'package:web_portfolio/pages/unknown.dart';
+export 'package:web_portfolio/pages/unknown_page.dart';
+export 'package:web_portfolio/pages/under_construction.dart';

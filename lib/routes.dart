@@ -17,7 +17,7 @@ Route<dynamic>? generateCustomRoute(RouteSettings settings) {
         transitionsBuilder: (_, a, __, c) =>
             FadeTransition(opacity: a, child: c));
   }
-  if (settings.name == "/softPage") {
+  if (settings.name == "/software-projects") {
     return PageRouteBuilder(
         settings:
             settings, // Pass this to make popUntil(), pushNamedAndRemoveUntil(), works
@@ -25,7 +25,7 @@ Route<dynamic>? generateCustomRoute(RouteSettings settings) {
         transitionsBuilder: (_, a, __, c) =>
             FadeTransition(opacity: a, child: c));
   }
-  if (settings.name == "/mechPage") {
+  if (settings.name == "/mechanical-projects") {
     return PageRouteBuilder(
         settings:
             settings, // Pass this to make popUntil(), pushNamedAndRemoveUntil(), works
@@ -33,7 +33,7 @@ Route<dynamic>? generateCustomRoute(RouteSettings settings) {
         transitionsBuilder: (_, a, __, c) =>
             FadeTransition(opacity: a, child: c));
   }
-  if (settings.name == "/otherPage") {
+  if (settings.name == "/other-projects") {
     return PageRouteBuilder(
         settings:
             settings, // Pass this to make popUntil(), pushNamedAndRemoveUntil(), works
@@ -41,6 +41,6 @@ Route<dynamic>? generateCustomRoute(RouteSettings settings) {
         transitionsBuilder: (_, a, __, c) =>
             FadeTransition(opacity: a, child: c));
   }
-  // Unknown route
-  return MaterialPageRoute(builder: (_) => UnknownPage()); // ! add unknown page
+  // 404: Page not found
+  return MaterialPageRoute(builder: (_) => UnknownPage());
 }
