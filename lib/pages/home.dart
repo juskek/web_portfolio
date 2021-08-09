@@ -243,7 +243,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Styles.backgroundGray,
       // ========================= APPBAR =========================
-      drawer: _customDrawer(context),
+      drawer: customDrawer(context),
       appBar: portfolioAppBar(context),
       // AppBar(
       //   // APPBAR Style
@@ -590,71 +590,4 @@ class FeaturePage extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget _customDrawer(BuildContext context) {
-  return Drawer(
-    child: ListView(
-      padding: EdgeInsets.zero,
-      children: [
-        ListTile(
-          leading: SizedBox(
-            height: kToolbarHeight * 0.4,
-            child: Image.asset(
-              'assets/jk_sb.png',
-            ),
-          ),
-          title: Text('HOME'),
-        ),
-        ListTile(
-          leading: Icon(Icons.code),
-          title: Text(
-            'SOFTWARE PROJECTS - COMING SOON',
-            style: Styles.smallText,
-          ),
-          onTap: () => Navigator.pushNamed(context, '/softPage'),
-        ),
-        ListTile(
-          leading: Icon(Icons.carpenter_outlined),
-          title: Text(
-            'MECHANICAL PROJECTS - COMING SOON',
-            style: Styles.smallText,
-          ),
-          onTap: () => Navigator.pushNamed(context, '/mechPage'),
-        ),
-        ListTile(
-          leading: Icon(Icons.bubble_chart_outlined),
-          title: Text(
-            'OTHER PROJECTS - COMING SOON',
-            style: Styles.smallText,
-          ),
-          onTap: () => Navigator.pushNamed(context, '/otherPage'),
-        ),
-        ListTile(
-          leading: Icon(Icons.dashboard_outlined),
-          title: Text(
-            'BLOG',
-            style: Styles.smallText,
-          ),
-          onTap: launchBlog,
-        ),
-        ListTile(
-          leading: Icon(Icons.insert_link),
-          title: Text(
-            'SITE REPOSITORY',
-            style: Styles.smallText,
-          ),
-          onTap: launchRepo,
-        ),
-        ListTile(
-          leading: Icon(Icons.coffee_outlined),
-          title: Text(
-            'BUY ME A COFFEE',
-            style: Styles.smallText,
-          ),
-          onTap: launchCoffee,
-        ),
-      ],
-    ),
-  );
 }

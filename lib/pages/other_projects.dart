@@ -12,6 +12,7 @@ class _OtherPageState extends State<OtherPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: portfolioAppBar(context),
+      drawer: customDrawer(context),
     );
   }
 }

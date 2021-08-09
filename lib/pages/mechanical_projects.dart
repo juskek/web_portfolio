@@ -11,6 +11,7 @@ class _MechPageState extends State<MechPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: customDrawer(context),
       appBar: portfolioAppBar(context),
     );
   }

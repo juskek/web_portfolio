@@ -13,6 +13,7 @@ class _SoftPageState extends State<SoftPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: portfolioAppBar(context),
+      drawer: customDrawer(context),
     );
   }
 }
