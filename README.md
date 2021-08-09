@@ -1,7 +1,7 @@
 - [1. Introduction](#1-introduction)
 - [2. Methods](#2-methods)
   - [2.1. Roadmap](#21-roadmap)
-  - [Adding Preview Image for LinkedIn](#adding-preview-image-for-linkedin)
+  - [Adding Preview Image for LinkedIn (MANUAL)](#adding-preview-image-for-linkedin-manual)
 - [3. Results](#3-results)
 
 # 1. Introduction
@@ -22,8 +22,9 @@ This repository holds my personal portfolio at [justinkek.com](justinkek.com).
   - Theremin
   - Formula Student Schematic
   - Bachelor's project
-  - 
-## Adding Preview Image for LinkedIn
+- 
+## Adding Preview Image for LinkedIn (MANUAL)
+The index.html file is overridden every time `flutter build web` is run. Need to find a way to add desired parameters to boilerplate code. 
 1. Run `flutter build web`
 2. Open build/web/index.html
 3. Add prefix attribute: 

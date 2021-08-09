@@ -58,8 +58,8 @@ void downloadFile(String url) {
 }
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  HomePage({Key? key}) : super(key: key);
+  // final String title;
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -242,7 +242,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Styles.backgroundGray,
       // ========================= APPBAR =========================
-      drawer: _customDrawer(),
+      drawer: _customDrawer(context),
       appBar: AppBar(
         // APPBAR Style
         centerTitle: true,
@@ -626,7 +626,7 @@ class FeaturePage extends StatelessWidget {
   }
 }
 
-Widget _customDrawer() {
+Widget _customDrawer(BuildContext context) {
   return Drawer(
     child: ListView(
       padding: EdgeInsets.zero,
@@ -646,6 +646,7 @@ Widget _customDrawer() {
             'SOFTWARE PROJECTS - COMING SOON',
             style: Styles.smallText,
           ),
+          onTap: () => Navigator.pushNamed(context, '/softPage'),
         ),
         ListTile(
           leading: Icon(Icons.carpenter_outlined),
@@ -653,6 +654,7 @@ Widget _customDrawer() {
             'MECHANICAL PROJECTS - COMING SOON',
             style: Styles.smallText,
           ),
+          onTap: () => Navigator.pushNamed(context, '/mechPage'),
         ),
         ListTile(
           leading: Icon(Icons.bubble_chart_outlined),
@@ -660,6 +662,7 @@ Widget _customDrawer() {
             'OTHER PROJECTS - COMING SOON',
             style: Styles.smallText,
           ),
+          onTap: () => Navigator.pushNamed(context, '/otherPage'),
         ),
         ListTile(
           leading: Icon(Icons.dashboard_outlined),
