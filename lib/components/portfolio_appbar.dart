@@ -84,7 +84,7 @@ Widget customDrawer(BuildContext context) {
             ),
           ),
           title: Text('HOME'),
-          onTap: () => Navigator.pushNamed(context, '/homePage'),
+          onTap: () => Navigator.pushNamed(context, '/'),
         ),
         ListTile(
           leading: Icon(Icons.code),

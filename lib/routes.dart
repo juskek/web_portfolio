@@ -9,7 +9,7 @@ import 'package:web_portfolio/index_main.dart';
 
 // custom animations for pushing pages
 Route<dynamic>? generateCustomRoute(RouteSettings settings) {
-  if (settings.name == "/homePage") {
+  if (settings.name == "/") {
     return PageRouteBuilder(
         settings:
             settings, // Pass this to make popUntil(), pushNamedAndRemoveUntil(), works
