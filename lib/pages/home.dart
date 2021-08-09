@@ -300,12 +300,12 @@ class _HomePageState extends State<HomePage> {
         // APPBAR TRAILING ACTIONS: LINKEDIN & GITHUB
         actions: [
           IconButton(
-            onPressed: _launchLinkedIn,
+            onPressed: launchLinkedIn,
             icon: Image.asset('assets/linkedin.png'),
             splashRadius: kToolbarHeight * 0.4,
           ),
           IconButton(
-            onPressed: _launchGitHub,
+            onPressed: launchGitHub,
             icon: Image.asset('assets/github.png'),
             splashRadius: kToolbarHeight * 0.4,
           ),
@@ -470,42 +470,6 @@ Widget _projContainer(int index) {
   );
 }
 
-// URLs
-const _linkedinURL = 'https://www.linkedin.com/in/justinkek/';
-const _githubURL = 'https://github.com/juskek';
-const _repoURL = 'https://github.com/juskek/web_portfolio';
-const _blogURL = 'https://justinkek.medium.com/';
-const _coffeeURL = 'https://www.buymeacoffee.com/justinkek';
-const _t2URL = 'https://t2diary-e583f.web.app/#/home';
-const _sentecURL =
-    'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6738060771831386112';
-const _cvURL =
-    'https://github.com/juskek/web_portfolio/raw/master/assets/Resume%20-%20Justin%20Kek_15Jul21.pdf'; // TODO:H update CV amd upload to github wo contact details
-void _launchGitHub() async => await canLaunch(_githubURL)
-    ? await launch(_githubURL)
-    : throw 'Could not launch $_githubURL';
-void _launchLinkedIn() async => await canLaunch(_linkedinURL)
-    ? await launch(_linkedinURL)
-    : throw 'Could not launch $_linkedinURL';
-void _launchRepo() async => await canLaunch(_repoURL)
-    ? await launch(_repoURL)
-    : throw 'Could not launch $_repoURL';
-void _launchBlog() async => await canLaunch(_blogURL)
-    ? await launch(_blogURL)
-    : throw 'Could not launch $_blogURL';
-void _launchCoffee() async => await canLaunch(_coffeeURL)
-    ? await launch(_coffeeURL)
-    : throw 'Could not launch $_coffeeURL';
-void _launchPage0() async => await canLaunch(_t2URL)
-    ? await launch(_t2URL)
-    : throw 'Could not launch $_t2URL';
-void _launchPage1() async => await canLaunch(_sentecURL)
-    ? await launch(_sentecURL)
-    : throw 'Could not launch $_sentecURL';
-void _launchPage2() async => await canLaunch(_cvURL)
-    ? await launch(_cvURL)
-    : throw 'Could not launch $_cvURL';
-
 // ================= DOTS INDICATOR CLASS =================
 /// An indicator showing the currently selected page of a PageController
 class DotsIndicator extends AnimatedWidget {
@@ -587,11 +551,11 @@ class FeaturePage extends StatelessWidget {
   onTap() {
     print("${this.idx} selected.");
     if (idx == 0) {
-      _launchPage0();
+      launchPage0();
     } else if (idx == 1) {
-      _launchPage1();
+      launchPage1();
     } else if (idx == 2) {
-      _launchPage2(); // for URL
+      launchPage2(); // for URL
     }
   }
 
@@ -670,7 +634,7 @@ Widget _customDrawer(BuildContext context) {
             'BLOG',
             style: Styles.smallText,
           ),
-          onTap: _launchBlog,
+          onTap: launchBlog,
         ),
         ListTile(
           leading: Icon(Icons.insert_link),
@@ -678,7 +642,7 @@ Widget _customDrawer(BuildContext context) {
             'SITE REPOSITORY',
             style: Styles.smallText,
           ),
-          onTap: _launchRepo,
+          onTap: launchRepo,
         ),
         ListTile(
           leading: Icon(Icons.coffee_outlined),
@@ -686,7 +650,7 @@ Widget _customDrawer(BuildContext context) {
             'BUY ME A COFFEE',
             style: Styles.smallText,
           ),
-          onTap: _launchCoffee,
+          onTap: launchCoffee,
         ),
       ],
     ),
