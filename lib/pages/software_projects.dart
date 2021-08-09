@@ -1,3 +1,4 @@
+import 'package:web_portfolio/components/portfolio_appbar.dart';
 import 'package:web_portfolio/index_main.dart';
 
 class SoftPage extends StatefulWidget {
@@ -10,6 +11,8 @@ class SoftPage extends StatefulWidget {
 class _SoftPageState extends State<SoftPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: portfolioAppBar(context),
+    );
   }
 }

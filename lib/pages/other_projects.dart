@@ -10,6 +10,8 @@ class OtherPage extends StatefulWidget {
 class _OtherPageState extends State<OtherPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: portfolioAppBar(context),
+    );
   }
 }

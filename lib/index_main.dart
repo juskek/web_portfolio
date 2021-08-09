@@ -11,6 +11,7 @@ export 'package:animated_text_kit/animated_text_kit.dart';
 export 'package:web_portfolio/styles.dart';
 export 'package:web_portfolio/components/backspace_text.dart';
 export 'package:web_portfolio/components/launch_urls.dart';
+export 'package:web_portfolio/components/portfolio_appbar.dart';
 
 // PAGES
 export 'package:web_portfolio/pages/home.dart';

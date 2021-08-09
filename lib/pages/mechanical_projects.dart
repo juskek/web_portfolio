@@ -10,6 +10,8 @@ class MechPage extends StatefulWidget {
 class _MechPageState extends State<MechPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: portfolioAppBar(context),
+    );
   }
 }

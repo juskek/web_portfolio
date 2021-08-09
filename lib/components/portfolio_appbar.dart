@@ -1,6 +1,6 @@
 import 'package:web_portfolio/index_main.dart';
 
-Widget PortfolioAppBar() {
+PreferredSizeWidget? portfolioAppBar(BuildContext context) {
   return AppBar(
     // APPBAR Style
     centerTitle: true,
