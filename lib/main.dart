@@ -320,11 +320,44 @@ class _MyHomePageState extends State<MyHomePage> {
 
         // APPBAR LEADING ITEM: DRAWER
         // leading: _jkPopupMenu(),
-        leading: Builder(
-          builder: (context) => IconButton(
-            icon: Image.asset('assets/jk_sb.png'),
-            onPressed: () => Scaffold.of(context).openDrawer(),
-          ),
+        leading: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Builder(
+              builder: (context) => IconButton(
+                icon: Image.asset('assets/jk_sb.png'),
+                onPressed: () => Scaffold.of(context).openDrawer(),
+              ),
+            ),
+            // TODO: fix text overflowing off leading item on the right
+            Container(
+              child: AnimatedTextKit(
+                isRepeatingAnimation: false,
+                animatedTexts: [
+                  FadeAnimatedText(
+                    '< MENU',
+                    textStyle: Styles.smallText,
+                  ),
+                  FadeAnimatedText(
+                    '< MENU',
+                    textStyle: Styles.smallText,
+                  ),
+                  FadeAnimatedText(
+                    '< MENU',
+                    textStyle: Styles.smallText,
+                  ),
+                  FadeAnimatedText(
+                    '< MENU',
+                    textStyle: Styles.smallText,
+                  ),
+                  FadeAnimatedText(
+                    '< MENU',
+                    textStyle: Styles.smallText,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
 
         // APPBAR TRAILING ACTIONS: LINKEDIN & GITHUB
