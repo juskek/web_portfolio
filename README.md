@@ -28,30 +28,30 @@ The index.html file is overridden every time `flutter build web` is run. Need to
 1. Run `flutter build web`
 2. Open build/web/index.html
 3. Add prefix attribute: 
-   `<html lang=”en” prefix=”og: http://ogp.me/ns#">` 
+   `<html lang="en" prefix="og: http://ogp.me/ns#">` 
    in `<html>` between `<!DOCTYPE html>` row and `<head>` row
 4. Add meta tags:
    ```
     <meta 
         property="og:title"
-        content="Example Title" 
+        content="Justin Kek" 
     />
     <meta 
       name="image" 
       property="og:image" 
-      content="<link>" 
+      content="https://raw.githubusercontent.com/juskek/brand_identity/master/web_preview.png" 
     />
     <meta 
       name="author" 
-      content="Example Author" 
+      content="Justin Kek" 
     />
     <meta 
       property="og:description" 
-      content="Example Description"
+      content="A collection of works by Justin Kek"
     />
     <meta 
       property="og:url" 
-      content="https://example.com" 
+      content="https://justinkek.com" 
     />
    ```
 5. Add link to desired preview image (1200x627) to under content.
