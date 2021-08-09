@@ -1,6 +1,9 @@
 import 'package:web_portfolio/index_main.dart';
 
 abstract class Styles {
+  // PADDING
+  static const double smallPadding = 10;
+  static const double largePadding = 30;
   static const TextStyle normalText = TextStyle(
     color: Colors.black,
     fontSize: 20,
