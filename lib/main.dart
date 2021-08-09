@@ -25,7 +25,8 @@ class WebPortfolio extends StatelessWidget {
     return MaterialApp(
       title: 'Justin Kek',
       home: HomePage(),
-      routes: customRoutes,
+      // routes: customRoutes,
+      onGenerateRoute: generateCustomRoute,
     );
   }
 }

@@ -84,11 +84,12 @@ Widget customDrawer(BuildContext context) {
             ),
           ),
           title: Text('HOME'),
+          onTap: () => Navigator.pushNamed(context, '/homePage'),
         ),
         ListTile(
           leading: Icon(Icons.code),
           title: Text(
-            'SOFTWARE PROJECTS - COMING SOON',
+            'SOFTWARE PROJECTS',
             style: Styles.smallText,
           ),
           onTap: () => Navigator.pushNamed(context, '/softPage'),
@@ -96,7 +97,7 @@ Widget customDrawer(BuildContext context) {
         ListTile(
           leading: Icon(Icons.carpenter_outlined),
           title: Text(
-            'MECHANICAL PROJECTS - COMING SOON',
+            'MECHANICAL PROJECTS',
             style: Styles.smallText,
           ),
           onTap: () => Navigator.pushNamed(context, '/mechPage'),
@@ -104,7 +105,7 @@ Widget customDrawer(BuildContext context) {
         ListTile(
           leading: Icon(Icons.bubble_chart_outlined),
           title: Text(
-            'OTHER PROJECTS - COMING SOON',
+            'OTHER PROJECTS',
             style: Styles.smallText,
           ),
           onTap: () => Navigator.pushNamed(context, '/otherPage'),

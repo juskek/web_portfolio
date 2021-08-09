@@ -1,20 +1,20 @@
 import 'package:web_portfolio/index_main.dart';
 
-class OtherPage extends StatefulWidget {
-  const OtherPage({Key? key}) : super(key: key);
+class UnknownPage extends StatefulWidget {
+  const UnknownPage({Key? key}) : super(key: key);
 
   @override
-  _OtherPageState createState() => _OtherPageState();
+  _UnknownPageState createState() => _UnknownPageState();
 }
 
-class _OtherPageState extends State<OtherPage> {
+class _UnknownPageState extends State<UnknownPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
       body: Text(
-        'OTHER PROJECTS COMING SOON',
+        'PAGE NOT FOUND',
         style: Styles.boldIntro,
       ),
     );
