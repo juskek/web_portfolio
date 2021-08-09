@@ -49,13 +49,6 @@ List projDescrs = [
   "My CV updated as of 15 July 2021, with a comprehensive list of my projects, achievements and education. Click here to download a pdf copy (I have omitted by contact details for privacy, please contact me via LinkedIn).",
 ];
 
-// TODO:H add links and link to button
-List projLinks = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "I developed a working retrofitted push button in the span of eight weeks.",
-  "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-];
-
 // TEXT ANIMATION
 bool helloAnimated = false;
 bool roleAnimated = false;
@@ -83,41 +76,31 @@ int previousPage = 0;
 
 // MAIN FUNCTION
 void main() {
-  runApp(MyApp());
+  runApp(WebPortfolio());
 }
 
 // MAIN CLASS
-class MyApp extends StatelessWidget {
+class WebPortfolio extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Justin Kek',
       // theme: ThemeData(primaryColor: Styles.white,primarySwatch: Styles.extraLightGray,),
-      home: MyHomePage(title: 'JUSTIN KEK'),
+      home: HomePage(title: 'JUSTIN KEK'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
+class HomePage extends StatefulWidget {
+  HomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   void _helloFinished() {
     setState(() {
       helloAnimated = true;
@@ -273,18 +256,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // // AUTO PAGE CHANGE TIMER
     _startPageTimer();
-    // _pageTimer = new Timer.periodic(Duration(seconds: 7), (Timer timer) {
-    //   _changePage();
-    //   _pageController.animateToPage(
-    //     currentPage,
-    //     duration: Duration(milliseconds: 350),
-    //     curve: Curves.easeIn,
-    //   );
-    // Short delay to allow screen to clear
-    //   Timer(Duration(seconds: 1), _roleReanimate);
-    // });
   }
 
   @override
@@ -478,38 +450,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-
-            // ----------------- BOTTOM ROW -----------------
-            // Flexible(
-            //   child: Container(
-            //     // height: 40,
-            //     color: Styles.backgroundGray,
-            //     child: Row(
-            //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //       children: [
-            //         // UI TEXT
-            //         SizedBox(width: smallPadding),
-            //         Text('WIDTH: $screenWidth\n' + uiState,
-            //             style: Styles.smallText),
-
-            //         // MIDDLE SPACER
-            //         Spacer(),
-
-            //         // ! troubleshooting bools
-            //         // Text('Hello: $helloAnimated Role: $roleAnimated'),
-            //         // Spacer(),
-
-            //         // REPOSITORY LINK
-            //         // TODO:L improve splash aesthetic
-            //         TextButton(
-            //           onPressed: _launchRepo,
-            //           child: Text("SITE\nREPO",
-            //               style: Styles.smallText, textAlign: TextAlign.right),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
@@ -564,34 +504,6 @@ Widget _projContainer(int index) {
     ],
   );
 }
-
-// ! TO BE REMOVED
-// POPUP MENU
-// Widget _jkPopupMenu() {
-//   return PopupMenuButton(
-//     icon: Image.asset('assets/jk_sb.png'),
-//     onSelected: null,
-//     elevation: 1,
-//     itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-//       const PopupMenuItem(
-//         value: null,
-//         child: Text('HOME'),
-//       ),
-//       const PopupMenuItem(
-//         value: null,
-//         child: Text('MECHANICAL PROJECTS - COMING SOON'),
-//       ),
-//       const PopupMenuItem(
-//         value: null,
-//         child: Text('SOFTWARE PROJECTS - COMING SOON'),
-//       ),
-//       const PopupMenuItem(
-//         value: null,
-//         child: Text('OTHER PROJECTS - COMING SOON'),
-//       ),
-//     ],
-//   );
-// }
 
 // URLs
 const _linkedinURL = 'https://www.linkedin.com/in/justinkek/';
@@ -715,34 +627,6 @@ class Page extends StatelessWidget {
       _launchPage1();
     } else if (idx == 2) {
       _launchPage2(); // for URL
-      // downloadFile(
-      //     'assets/Resume - Justin Kek_15Jul21.pdf'); // for downloading PDF
-      // final pdf = pw.Document();
-      // () async {
-      //   final bytes = await pdf.save();
-      //   final blob = html.Blob([bytes], 'application/pdf');
-      //   final url = html.Url.createObjectUrlFromBlob(blob);
-      //   html.window.open(url, '_blank');
-      //   html.Url.revokeObjectUrl(url);
-      // };
-
-      //   () async {
-      //     final pdf = pw.Document();
-
-      //     pdf.addPage(
-      //       pw.Page(
-      //         build: (pw.Context context) => pw.Center(
-      //           child: pw.Text('Hello World!'),
-      //         ),
-      //       ),
-      //     );
-      //     // Share.shareFiles([pdf], text: 'Reports');
-
-      //     //replace your code to save file from bellow
-      //     final output = await getTemporaryDirectory();
-      //     final path = "${output.path}/temp.pdf";
-      //     final file = await io.File(path).writeAsBytes(pdf.save());
-      //   };
     }
   }
 
@@ -782,12 +666,6 @@ Widget _customDrawer() {
     child: ListView(
       padding: EdgeInsets.zero,
       children: [
-        // DrawerHeader(
-        //   decoration: BoxDecoration(
-        //     color: Styles.white,
-        //   ),
-        //   child: Image.asset('assets/jk_sb.png', scale: 0.5),
-        // ),
         ListTile(
           leading: SizedBox(
             height: kToolbarHeight * 0.4,
