@@ -21,8 +21,9 @@ List projTitles = [
   "Curriculum Vitae",
 ];
 
+//TODO: fix line on bottom of jk_sb.png
 List projImages = [
-  "assets/p_t2diary.png",
+  "assets/p_t2diary.png", //TODO: fix black line on right border
   "assets/p_sentec.png",
   "assets/p_imperial.png",
 ];

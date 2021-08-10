@@ -38,7 +38,8 @@ class _UnknownPageState extends State<UnknownPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/'),
+                  onPressed: () => Navigator.pushNamed(
+                      context, '/'), // ! not fading, popping instead
                   child: Container(
                     padding: Styles.smallBorderPadding,
                     child: Text(

@@ -30,23 +30,15 @@ PreferredSizeWidget? portfolioAppBar(BuildContext context) {
             isRepeatingAnimation: false,
             animatedTexts: [
               FadeAnimatedText(
-                '< MENU',
+                '| MENU',
                 textStyle: Styles.smallText,
               ),
               FadeAnimatedText(
-                '< MENU',
+                '| MENU',
                 textStyle: Styles.smallText,
               ),
               FadeAnimatedText(
-                '< MENU',
-                textStyle: Styles.smallText,
-              ),
-              FadeAnimatedText(
-                '< MENU',
-                textStyle: Styles.smallText,
-              ),
-              FadeAnimatedText(
-                '< MENU',
+                '| MENU',
                 textStyle: Styles.smallText,
               ),
             ],
