@@ -16,7 +16,10 @@ class _TestPageState extends State<TestPage> {
       drawer: customDrawer(context),
       body: SafeArea(
         child: Expanded(
-          child: DashboardScreen(),
+          child: Container(
+            color: Styles.backgroundGray,
+            child: DashboardScreen(),
+          ),
         ),
       ),
     );
@@ -41,7 +44,7 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      MyFiles(),
+                      FeaturedFiles(),
                       SizedBox(height: Styles.smallPadding),
                       RecentFiles(),
                       if (Responsive.isMobile(context))

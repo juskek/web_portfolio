@@ -4,8 +4,8 @@ import 'package:web_portfolio/index_main.dart';
 // import '../../../constants.dart';
 // import 'file_info_card.dart';
 
-class MyFiles extends StatelessWidget {
-  const MyFiles({
+class FeaturedFiles extends StatelessWidget {
+  const FeaturedFiles({
     Key? key,
   }) : super(key: key);
 
@@ -14,27 +14,25 @@ class MyFiles extends StatelessWidget {
     final Size _size = MediaQuery.of(context).size;
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "My Files",
-              style: Theme.of(context).textTheme.subtitle1,
-            ),
-            ElevatedButton.icon(
-              style: TextButton.styleFrom(
-                padding: EdgeInsets.symmetric(
-                  horizontal: Styles.smallPadding * 1.5,
-                  vertical: Styles.smallPadding /
-                      (Responsive.isMobile(context) ? 2 : 1),
-                ),
-              ),
-              onPressed: () {},
-              icon: Icon(Icons.add),
-              label: Text("Add New"),
-            ),
-          ],
-        ),
+        Text('Software Projects', style: Styles.boldIntroCompact),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //   children: [
+        // Text("Featured", style: Styles.boldProj),
+        // ElevatedButton.icon(
+        //   style: TextButton.styleFrom(
+        //     padding: EdgeInsets.symmetric(
+        //       horizontal: Styles.smallPadding * 1.5,
+        //       vertical: Styles.smallPadding /
+        //           (Responsive.isMobile(context) ? 2 : 1),
+        //     ),
+        //   ),
+        //   onPressed: () {},
+        //   icon: Icon(Icons.add),
+        //   label: Text("Add New"),
+        // ),
+        //   ],
+        // ),
         SizedBox(height: Styles.smallPadding),
         Responsive(
           mobile: FileInfoCardGridView(
@@ -73,7 +71,9 @@ class FileInfoCardGridView extends StatelessWidget {
         mainAxisSpacing: Styles.smallPadding,
         childAspectRatio: childAspectRatio,
       ),
-      itemBuilder: (context, index) => FileInfoCard(info: demoMyFiles[index]),
+      itemBuilder: (context, index) => Padding(
+          padding: EdgeInsets.all(Styles.smallPadding),
+          child: FileInfoCard(info: demoMyFiles[index])),
     );
   }
 }

@@ -18,10 +18,11 @@ class FileInfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(Styles.smallPadding),
-      decoration: BoxDecoration(
-        color: Styles.extraLightGray,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-      ),
+      decoration: Styles.mainBoxDecoration,
+      // BoxDecoration(
+      //   color: Styles.extraLightGray,
+      //   borderRadius: const BorderRadius.all(Radius.circular(10)),
+      // ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -578,6 +578,7 @@ class FeaturePage extends StatelessWidget {
                   fit: StackFit.expand,
                   children: <Widget>[
                     this.page,
+                    // TODO: standardise the look of cards
                     new Material(
                       type: MaterialType.transparency,
                       child: new InkWell(onTap: this.onTap),

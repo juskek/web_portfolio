@@ -12,6 +12,20 @@ abstract class Styles {
   static Border thickBorder = Border.all(color: Styles.black, width: 4);
   static Border thinBorder = Border.all(color: Styles.black, width: 2);
 
+  // BOXES
+  static BoxDecoration mainBoxDecoration = BoxDecoration(
+    color: Styles.white,
+    borderRadius: const BorderRadius.all(Radius.circular(5)),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey.withOpacity(0.5),
+        spreadRadius: 1,
+        blurRadius: 5,
+        offset: Offset(0, 3),
+      )
+    ],
+  );
+
   // TEXT
   static const TextStyle normalText = TextStyle(
     color: Styles.black,
