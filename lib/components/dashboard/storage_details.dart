@@ -23,13 +23,7 @@ class StorageDetails extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Storage Details",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
+          Text("Project Type Breakdown", style: Styles.normalText),
           SizedBox(height: Styles.smallPadding),
           Chart(),
           StorageInfoCard(

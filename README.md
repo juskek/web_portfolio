@@ -13,7 +13,8 @@ This repository holds my personal portfolio at [justinkek.com](justinkek.com).
 - BUG: text animation not synced after opening other pages
 - Add to software projects:
   - DartPad Algorithms
-  - T2Diary
+  - T2Diary 
+  - T2Diary Figma: https://www.figma.com/proto/mKPjD8oujuOEN7HKPgFnhh/App_Ver5?node-id=214%3A23&scaling=scale-down&page-id=0%3A1&starting-point-node-id=214%3A23
   - Slotcar Racing
   - ECM Project
   - learning repository

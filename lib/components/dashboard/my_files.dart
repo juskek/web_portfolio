@@ -33,7 +33,9 @@ class FeaturedFiles extends StatelessWidget {
         // ),
         //   ],
         // ),
-        SizedBox(height: Styles.smallPadding),
+        SizedBox(
+          height: Styles.smallPadding,
+        ),
         Responsive(
           mobile: FileInfoCardGridView(
             crossAxisCount: _size.width < 650 ? 2 : 4,
@@ -62,6 +64,7 @@ class FileInfoCardGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      clipBehavior: Clip.none, // prevent shadows from getting clipped by parent
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: demoMyFiles.length,
@@ -71,9 +74,7 @@ class FileInfoCardGridView extends StatelessWidget {
         mainAxisSpacing: Styles.smallPadding,
         childAspectRatio: childAspectRatio,
       ),
-      itemBuilder: (context, index) => Padding(
-          padding: EdgeInsets.all(Styles.smallPadding),
-          child: FileInfoCard(info: demoMyFiles[index])),
+      itemBuilder: (context, index) => FileInfoCard(info: demoMyFiles[index]),
     );
   }
 }
