@@ -1,5 +1,18 @@
 import 'package:web_portfolio/index_main.dart';
 
+// CONTAINERS
+Widget headerTextContainer(String textString) {
+  return Container(
+    padding: Styles.largeBorderPadding,
+    decoration: BoxDecoration(border: Styles.thickBorder),
+    child: Text(
+      textString,
+      style: Styles.boldIntro,
+      textAlign: TextAlign.center,
+    ),
+  );
+}
+
 abstract class Styles {
   // PADDING
   static const double smallPadding = 10;
@@ -12,7 +25,7 @@ abstract class Styles {
   static Border thickBorder = Border.all(color: Styles.black, width: 4);
   static Border thinBorder = Border.all(color: Styles.black, width: 2);
 
-  // BOXES
+  // BOX DECORATIONS
   static BoxDecoration mainBoxDecoration = BoxDecoration(
     color: Styles.white,
     borderRadius: const BorderRadius.all(Radius.circular(5)),
@@ -25,6 +38,19 @@ abstract class Styles {
       )
     ],
   );
+
+  // PIE CHART
+  static const double pieChartRadius = 20;
+  static const Color pieChartColor0 = Color.fromRGBO(166, 255, 235, 1);
+  static const Color pieChartColor1 = Color.fromRGBO(179, 228, 252, 1);
+  static const Color pieChartColor2 = Color.fromRGBO(128, 222, 234, 1);
+  static const Color pieChartColor3 = Color.fromRGBO(78, 195, 247, 1);
+  static const Color pieChartColor4 = Color.fromRGBO(37, 198, 218, 1);
+  static const Color pieChartColor5 = Color.fromRGBO(1, 172, 193, 1);
+  static const Color pieChartColor6 = Color.fromRGBO(1, 151, 166, 1);
+  static const Color pieChartColor7 = Color.fromRGBO(0, 188, 212, 1);
+  static const Color pieChartColor8 = Color.fromRGBO(1, 131, 143, 1);
+  static const Color pieChartColor9 = Color.fromRGBO(1, 96, 100, 1);
 
   // TEXT
   static const TextStyle normalText = TextStyle(

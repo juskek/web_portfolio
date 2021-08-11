@@ -23,30 +23,30 @@ class StorageDetails extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Project Type Breakdown", style: Styles.normalText),
+          Text("Skills", style: Styles.normalText),
           SizedBox(height: Styles.smallPadding),
           Chart(),
           StorageInfoCard(
             svgSrc: "assets/icons/Documents.svg",
-            title: "Documents Files",
+            title: "Data Structures & Algorithms",
             amountOfFiles: "1.3GB",
             numOfFiles: 1328,
           ),
           StorageInfoCard(
             svgSrc: "assets/icons/media.svg",
-            title: "Media Files",
+            title: "UI & UX",
             amountOfFiles: "15.3GB",
             numOfFiles: 1328,
           ),
           StorageInfoCard(
             svgSrc: "assets/icons/folder.svg",
-            title: "Other Files",
+            title: "App Development",
             amountOfFiles: "1.3GB",
             numOfFiles: 1328,
           ),
           StorageInfoCard(
             svgSrc: "assets/icons/unknown.svg",
-            title: "Unknown",
+            title: "Games",
             amountOfFiles: "1.3GB",
             numOfFiles: 140,
           ),

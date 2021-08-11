@@ -119,12 +119,28 @@ Widget customDrawer(BuildContext context) {
           onTap: launchRepo,
         ),
         ListTile(
+          leading: Icon(Icons.contact_page_outlined),
+          title: Text(
+            'CONTACT',
+            style: Styles.smallText,
+          ),
+          onTap: () => Navigator.pushNamed(context, '/consulting'),
+        ),
+        ListTile(
           leading: Icon(Icons.coffee_outlined),
           title: Text(
-            'BUY ME A COFFEE',
+            'SEND COFFEE',
             style: Styles.smallText,
           ),
           onTap: launchCoffee,
+        ),
+        ListTile(
+          leading: Icon(Icons.science_outlined),
+          title: Text(
+            'EXPERIMENTAL',
+            style: Styles.smallText,
+          ),
+          onTap: () => Navigator.pushNamed(context, '/experimental'),
         ),
       ],
     ),

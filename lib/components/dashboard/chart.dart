@@ -29,12 +29,12 @@ class Chart extends StatelessWidget {
               children: [
                 SizedBox(height: Styles.smallPadding),
                 Text(
-                  "29.1",
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        height: 0.5,
-                      ),
+                  "29.1", style: Styles.normalText,
+                  // Theme.of(context).textTheme.headline4!.copyWith(
+                  //       color: Colors.white,
+                  //       fontWeight: FontWeight.w600,
+                  //       height: 0.5,
+                  //     ),
                 ),
                 Text("of 128GB")
               ],
@@ -46,35 +46,36 @@ class Chart extends StatelessWidget {
   }
 }
 
+// TODO: change pie chart value to number of projects
 List<PieChartSectionData> paiChartSelectionDatas = [
   PieChartSectionData(
-    color: Styles.black,
+    color: Styles.pieChartColor0,
     value: 25,
     showTitle: false,
-    radius: 25,
+    radius: Styles.pieChartRadius,
   ),
   PieChartSectionData(
-    color: Color(0xFF26E5FF),
+    color: Styles.pieChartColor1,
     value: 20,
     showTitle: false,
-    radius: 22,
+    radius: Styles.pieChartRadius,
   ),
   PieChartSectionData(
-    color: Color(0xFFFFCF26),
+    color: Styles.pieChartColor2,
     value: 10,
     showTitle: false,
-    radius: 19,
+    radius: Styles.pieChartRadius,
   ),
   PieChartSectionData(
-    color: Color(0xFFEE2727),
+    color: Styles.pieChartColor3,
     value: 15,
     showTitle: false,
-    radius: 16,
+    radius: Styles.pieChartRadius,
   ),
   PieChartSectionData(
-    color: Styles.black.withOpacity(0.1),
+    color: Styles.pieChartColor4,
     value: 25,
     showTitle: false,
-    radius: 13,
+    radius: Styles.pieChartRadius,
   ),
 ];

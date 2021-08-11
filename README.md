@@ -10,6 +10,8 @@ This repository holds my personal portfolio at [justinkek.com](justinkek.com).
 # 2. Methods
 ## 2.1. Roadmap
 - Creating dashboard for software and mechanical projects
+  - Replace pie chart with radar graph
+  - 
 - BUG: text animation not synced after opening other pages
 - Add to software projects:
   - DartPad Algorithms

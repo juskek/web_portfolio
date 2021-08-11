@@ -1,14 +1,14 @@
 import 'package:web_portfolio/components/portfolio_appbar.dart';
 import 'package:web_portfolio/index_main.dart';
 
-class TestPage extends StatefulWidget {
-  const TestPage({Key? key}) : super(key: key);
+class ExperimentalPage extends StatefulWidget {
+  const ExperimentalPage({Key? key}) : super(key: key);
 
   @override
-  _TestPageState createState() => _TestPageState();
+  _ExperimentalPageState createState() => _ExperimentalPageState();
 }
 
-class _TestPageState extends State<TestPage> {
+class _ExperimentalPageState extends State<ExperimentalPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

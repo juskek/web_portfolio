@@ -42,11 +42,19 @@ Route<dynamic>? generateCustomRoute(RouteSettings settings) {
         transitionsBuilder: (_, a, __, c) =>
             FadeTransition(opacity: a, child: c));
   }
-  if (settings.name == "/test") {
+  if (settings.name == "/experimental") {
     return PageRouteBuilder(
         settings:
             settings, // Pass this to make popUntil(), pushNamedAndRemoveUntil(), works
-        pageBuilder: (_, __, ___) => TestPage(),
+        pageBuilder: (_, __, ___) => ExperimentalPage(),
+        transitionsBuilder: (_, a, __, c) =>
+            FadeTransition(opacity: a, child: c));
+  }
+  if (settings.name == "/consulting") {
+    return PageRouteBuilder(
+        settings:
+            settings, // Pass this to make popUntil(), pushNamedAndRemoveUntil(), works
+        pageBuilder: (_, __, ___) => ContactPage(),
         transitionsBuilder: (_, a, __, c) =>
             FadeTransition(opacity: a, child: c));
   }

@@ -36,4 +36,5 @@ export 'package:web_portfolio/pages/mechanical_projects.dart';
 export 'package:web_portfolio/pages/other_projects.dart';
 export 'package:web_portfolio/pages/unknown_page.dart';
 export 'package:web_portfolio/pages/under_construction.dart';
-export 'package:web_portfolio/pages/test.dart';
+export 'package:web_portfolio/pages/experimental.dart';
+export 'package:web_portfolio/pages/contact.dart';

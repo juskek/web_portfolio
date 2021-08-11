@@ -44,6 +44,7 @@ class StorageInfoCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
+                    style: Styles.smallText,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -57,7 +58,7 @@ class StorageInfoCard extends StatelessWidget {
               ),
             ),
           ),
-          Text(amountOfFiles)
+          // Text(amountOfFiles)
         ],
       ),
     );
