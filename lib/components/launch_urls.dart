@@ -13,7 +13,7 @@ const _t2URL = 'https://t2diary-e583f.web.app/#/home';
 const _sentecURL =
     'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6738060771831386112';
 const _cvURL =
-    'https://github.com/juskek/web_portfolio/raw/master/assets/Resume%20-%20Justin%20Kek_15Jul21.pdf'; // TODO:H update CV amd upload to github wo contact details
+    'https://github.com/juskek/web_portfolio/raw/master/assets/Web%20Resume%20-%20Justin%20Kek_2pages.pdf'; // TODO:H update CV amd upload to github wo contact details
 
 // TODO: WRITE A FUNCTION FOR THIS..... lol
 void launchReport() async => await canLaunch(_reportURL)
