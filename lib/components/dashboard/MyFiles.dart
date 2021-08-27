@@ -21,7 +21,8 @@ List demoMyFiles = [
   CloudStorageInfo(
     title: "My Website",
     numOfFiles: 1328,
-    svgSrc: "assets/jk_sb.svg",
+    // svgSrc: "assets/jk_sb.svg",
+    svgSrc: "assets/icons/google_drive.svg",
     totalStorage: "1.9GB",
     color: Styles.black,
     percentage: 35,

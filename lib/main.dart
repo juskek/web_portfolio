@@ -26,8 +26,9 @@ class WebPortfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Justin Kek',
-      home: HomePage(),
+      // home: HomePage(),
       // home: ExperimentalPage(),
+      home: SoftPage(),
       onGenerateRoute: generateCustomRoute, // for fading animation
     );
   }

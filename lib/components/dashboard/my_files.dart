@@ -4,10 +4,28 @@ import 'package:web_portfolio/index_main.dart';
 // import '../../../constants.dart';
 // import 'file_info_card.dart';
 
+class CloudStorageInfo {
+  final String? svgSrc, title, totalStorage;
+  final int? numOfFiles, percentage;
+  final Color? color;
+
+  CloudStorageInfo({
+    this.svgSrc,
+    this.title,
+    this.totalStorage,
+    this.numOfFiles,
+    this.percentage,
+    this.color,
+  });
+}
+
 class FeaturedFiles extends StatelessWidget {
-  const FeaturedFiles({
+  final _featCards;
+  const FeaturedFiles(
+    featCards, {
     Key? key,
-  }) : super(key: key);
+  })  : _featCards = featCards,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +56,13 @@ class FeaturedFiles extends StatelessWidget {
         ),
         Responsive(
           mobile: FileInfoCardGridView(
+            _featCards,
             crossAxisCount: _size.width < 650 ? 2 : 4,
             childAspectRatio: _size.width < 650 ? 1.3 : 1,
           ),
-          tablet: FileInfoCardGridView(),
+          tablet: FileInfoCardGridView(_featCards),
           desktop: FileInfoCardGridView(
+            _featCards,
             childAspectRatio: _size.width < 1400 ? 1.1 : 1.4,
           ),
         ),
@@ -52,29 +72,33 @@ class FeaturedFiles extends StatelessWidget {
 }
 
 class FileInfoCardGridView extends StatelessWidget {
-  const FileInfoCardGridView({
+  const FileInfoCardGridView(
+    featCards, {
     Key? key,
     this.crossAxisCount = 4,
     this.childAspectRatio = 1,
-  }) : super(key: key);
+  })  : _featCards = featCards,
+        super(key: key);
 
   final int crossAxisCount;
   final double childAspectRatio;
+  final _featCards;
 
   @override
   Widget build(BuildContext context) {
+    print('Reached gridview builder');
     return GridView.builder(
       clipBehavior: Clip.none, // prevent shadows from getting clipped by parent
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: demoMyFiles.length,
+      itemCount: _featCards.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
         crossAxisSpacing: Styles.smallPadding,
         mainAxisSpacing: Styles.smallPadding,
         childAspectRatio: childAspectRatio,
       ),
-      itemBuilder: (context, index) => FileInfoCard(info: demoMyFiles[index]),
+      itemBuilder: (context, index) => FileInfoCard(info: _featCards[index]),
     );
   }
 }

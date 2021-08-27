@@ -22,17 +22,18 @@ export 'package:web_portfolio/components/dashboard/header.dart'; // from dashboa
 export 'package:web_portfolio/components/dashboard/my_files.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/recent_files.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/storage_details.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/MyFiles.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/RecentFile.dart'; // from dashboard
+// export 'package:web_portfolio/components/dashboard/MyFiles.dart'; // from dashboard
+// export 'package:web_portfolio/components/dashboard/RecentFile.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/file_info_card.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/storage_info_card.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/chart.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/MenuController.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/dashboard_screen.dart'; // from dashboard
 
 // PAGES
 export 'package:web_portfolio/pages/home.dart';
-export 'package:web_portfolio/pages/software_projects.dart';
-export 'package:web_portfolio/pages/mechanical_projects.dart';
+export 'package:web_portfolio/pages/software/software_projects.dart';
+export 'package:web_portfolio/pages/mechanical/mechanical_projects.dart';
 export 'package:web_portfolio/pages/other_projects.dart';
 export 'package:web_portfolio/pages/unknown_page.dart';
 export 'package:web_portfolio/pages/under_construction.dart';

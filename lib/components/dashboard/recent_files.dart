@@ -6,11 +6,21 @@ import 'package:web_portfolio/index_main.dart';
 // import 'package:flutter_svg/svg.dart';
 
 // import '../../../constants.dart';
+class RecentFile {
+  // final String? icon, title, date, size;
+  final String? icon, title, description;
+
+  // RecentFile({this.icon, this.title, this.date, this.size});
+  RecentFile({this.icon, this.title, this.description});
+}
 
 class RecentFiles extends StatelessWidget {
-  const RecentFiles({
+  final _otherCards;
+  const RecentFiles(
+    otherCards, {
     Key? key,
-  }) : super(key: key);
+  })  : _otherCards = otherCards,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +55,8 @@ class RecentFiles extends StatelessWidget {
                 // ),
               ],
               rows: List.generate(
-                demoRecentFiles.length,
-                (index) => recentFileDataRow(demoRecentFiles[index]),
+                _otherCards.length,
+                (index) => recentFileDataRow(_otherCards[index]),
               ),
             ),
           ),

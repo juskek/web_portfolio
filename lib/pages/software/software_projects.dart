@@ -1,5 +1,6 @@
 import 'package:web_portfolio/components/portfolio_appbar.dart';
 import 'package:web_portfolio/index_main.dart';
+import 'cards_soft.dart';
 
 class SoftPage extends StatefulWidget {
   const SoftPage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _SoftPageState extends State<SoftPage> {
     return Scaffold(
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
-      body: underConstruction(context),
+      body: DashboardScreen(softFeat, softOther),
     );
   }
 }
