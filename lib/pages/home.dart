@@ -34,7 +34,7 @@ List projImages = [
 List projDescrs = [
   "I led a team of six to design mobile application for Type 2 Diabetics over the course of a year. Design and development was recursively achieved with the help of Type 2 Diabetics and healthcare providers. Click here for a web app prototype (best viewed on mobile).",
   "I developed a self-sterilising push button prototype in the span of eight weeks at Sentec (Xylem) in response to COVID-19, leading to an initial patent filing upon review by management. Click here for a video demonstration.",
-  "My CV updated as of 15 July 2021, with a comprehensive list of my projects, achievements and education. Click here to download a pdf copy (I have omitted by contact details for privacy, please contact me via LinkedIn).",
+  "I spent four years at Imperial College London engaged in a wide variety of mechanical, electrical and software projects. Click here for my LinkedIn.",
 ];
 
 // TEXT ANIMATION
@@ -246,74 +246,7 @@ class _HomePageState extends State<HomePage> {
       // ========================= APPBAR =========================
       drawer: customDrawer(context),
       appBar: portfolioAppBar(context),
-      // AppBar(
-      //   // APPBAR Style
-      //   centerTitle: true,
-      //   shadowColor: Colors.transparent,
-      //   backgroundColor: Styles.white,
 
-      //   // APPBAR Border
-      //   bottom: PreferredSize(
-      //     child: Container(color: Styles.lightGray, height: 2),
-      //     preferredSize: Size.fromHeight(2),
-      //   ),
-
-      //   // APPBAR LEADING ITEM: DRAWER
-      //   // leading: _jkPopupMenu(),
-      //   leading: Row(
-      //     crossAxisAlignment: CrossAxisAlignment.center,
-      //     children: [
-      //       Builder(
-      //         builder: (context) => IconButton(
-      //           icon: Image.asset('assets/jk_sb.png'),
-      //           onPressed: () => Scaffold.of(context).openDrawer(),
-      //         ),
-      //       ),
-      //       // TODO: fix text overflowing off leading item on the right
-      //       Container(
-      //         child: AnimatedTextKit(
-      //           isRepeatingAnimation: false,
-      //           animatedTexts: [
-      //             FadeAnimatedText(
-      //               '< MENU',
-      //               textStyle: Styles.smallText,
-      //             ),
-      //             FadeAnimatedText(
-      //               '< MENU',
-      //               textStyle: Styles.smallText,
-      //             ),
-      //             FadeAnimatedText(
-      //               '< MENU',
-      //               textStyle: Styles.smallText,
-      //             ),
-      //             FadeAnimatedText(
-      //               '< MENU',
-      //               textStyle: Styles.smallText,
-      //             ),
-      //             FadeAnimatedText(
-      //               '< MENU',
-      //               textStyle: Styles.smallText,
-      //             ),
-      //           ],
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-
-      //   // APPBAR TRAILING ACTIONS: LINKEDIN & GITHUB
-      //   actions: [
-      //     IconButton(
-      //       onPressed: launchLinkedIn,
-      //       icon: Image.asset('assets/linkedin.png'),
-      //       splashRadius: kToolbarHeight * 0.4,
-      //     ),
-      //     IconButton(
-      //       onPressed: launchGitHub,
-      //       icon: Image.asset('assets/github.png'),
-      //       splashRadius: kToolbarHeight * 0.4,
-      //     ),
-      //   ],
-      // ),
       // ========================= MAIN BODY =========================
       // MAIN BODY
       body: Center(

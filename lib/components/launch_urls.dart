@@ -12,8 +12,8 @@ const _upworkURL = 'https://www.upwork.com/freelancers/~01004b88e742d2b867';
 const _t2URL = 'https://t2diary-e583f.web.app/#/home';
 const _sentecURL =
     'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6738060771831386112';
-const _cvURL =
-    'https://github.com/juskek/web_portfolio/raw/master/assets/Web%20Resume%20-%20Justin%20Kek_2pages.pdf'; // TODO:H update CV amd upload to github wo contact details
+// const _cvURL =
+//     'https://github.com/juskek/web_portfolio/raw/master/assets/Web%20Resume%20-%20Justin%20Kek_2pages.pdf';
 
 // TODO: WRITE A FUNCTION FOR THIS..... lol
 void launchReport() async => await canLaunch(_reportURL)
@@ -46,6 +46,6 @@ void launchPage0() async => await canLaunch(_t2URL)
 void launchPage1() async => await canLaunch(_sentecURL)
     ? await launch(_sentecURL)
     : throw 'Could not launch $_sentecURL';
-void launchPage2() async => await canLaunch(_cvURL)
-    ? await launch(_cvURL)
-    : throw 'Could not launch $_cvURL';
+void launchPage2() async => await canLaunch(_linkedinURL)
+    ? await launch(_linkedinURL)
+    : throw 'Could not launch $_linkedinURL';
