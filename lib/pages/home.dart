@@ -487,11 +487,11 @@ class FeaturePage extends StatelessWidget {
   onTap() {
     print("${this.idx} selected.");
     if (idx == 0) {
-      launchPage0();
+      launchURL(t2URL);
     } else if (idx == 1) {
-      launchPage1();
+      launchURL(sentecURL);
     } else if (idx == 2) {
-      launchPage2(); // for URL
+      launchURL(linkedinURL);
     }
   }
 

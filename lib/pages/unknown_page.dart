@@ -50,7 +50,7 @@ class _UnknownPageState extends State<UnknownPage> {
                 ),
                 Container(width: Styles.smallPadding),
                 OutlinedButton(
-                  onPressed: launchReport,
+                  onPressed: () => launchURL(reportURL),
                   child: Container(
                     padding: Styles.smallBorderPadding,
                     child: Text(

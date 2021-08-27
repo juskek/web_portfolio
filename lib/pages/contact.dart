@@ -30,7 +30,8 @@ class _ContactPageState extends State<ContactPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   OutlinedButton(
-                    onPressed: launchWorksome, // ! not fading, popping instead
+                    onPressed: () =>
+                        launchURL(worksomeURL), // ! not fading, popping instead
                     child: Container(
                       padding: Styles.smallBorderPadding,
                       child: Text(
@@ -41,7 +42,7 @@ class _ContactPageState extends State<ContactPage> {
                   ),
                   Container(width: Styles.smallPadding),
                   OutlinedButton(
-                    onPressed: launchUpwork,
+                    onPressed: () => launchURL(upworkURL),
                     child: Container(
                       padding: Styles.smallBorderPadding,
                       child: Text(
@@ -60,7 +61,7 @@ class _ContactPageState extends State<ContactPage> {
               ),
               SizedBox(height: Styles.smallPadding),
               OutlinedButton(
-                onPressed: launchLinkedIn,
+                onPressed: () => launchURL(linkedinURL),
                 child: Container(
                   padding: Styles.smallBorderPadding,
                   child: Text(

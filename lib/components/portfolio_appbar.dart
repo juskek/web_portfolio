@@ -49,12 +49,19 @@ PreferredSizeWidget? portfolioAppBar(BuildContext context) {
     // APPBAR TRAILING ACTIONS: LINKEDIN & GITHUB
     actions: [
       IconButton(
-        onPressed: launchLinkedIn,
+        onPressed: () => launchURL(mediumURL),
+        // TODO: render svg asset
+        icon: SvgPicture.asset('assets/medium.svg'),
+        // icon: Image.asset('assets/linkedin.png'),
+        splashRadius: kToolbarHeight * 0.4,
+      ),
+      IconButton(
+        onPressed: () => launchURL(linkedinURL),
         icon: Image.asset('assets/linkedin.png'),
         splashRadius: kToolbarHeight * 0.4,
       ),
       IconButton(
-        onPressed: launchGitHub,
+        onPressed: () => launchURL(githubURL),
         icon: Image.asset('assets/github.png'),
         splashRadius: kToolbarHeight * 0.4,
       ),
@@ -107,7 +114,7 @@ Widget customDrawer(BuildContext context) {
             'BLOG',
             style: Styles.smallText,
           ),
-          onTap: launchBlog,
+          onTap: () => launchURL(blogURL),
         ),
         ListTile(
           leading: Icon(Icons.insert_link),
@@ -115,7 +122,7 @@ Widget customDrawer(BuildContext context) {
             'SITE REPOSITORY',
             style: Styles.smallText,
           ),
-          onTap: launchRepo,
+          onTap: () => launchURL(repoURL),
         ),
         ListTile(
           leading: Icon(Icons.contact_page_outlined),
@@ -131,7 +138,7 @@ Widget customDrawer(BuildContext context) {
             'SEND COFFEE',
             style: Styles.smallText,
           ),
-          onTap: launchCoffee,
+          onTap: () => launchURL(coffeeURL),
         ),
         ListTile(
           leading: Icon(Icons.science_outlined),
