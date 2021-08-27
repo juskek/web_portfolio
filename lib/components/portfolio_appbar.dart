@@ -2,6 +2,7 @@ import 'package:web_portfolio/index_main.dart';
 
 PreferredSizeWidget? portfolioAppBar(BuildContext context) {
   return AppBar(
+    // TODO: make drop shadow consistent
     leadingWidth: 100, // increase leading width to fit menu animation
     // APPBAR Style
     centerTitle: true,

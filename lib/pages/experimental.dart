@@ -15,12 +15,13 @@ class _ExperimentalPageState extends State<ExperimentalPage> {
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
       body: SafeArea(
-        child: Expanded(
-          child: Container(
-            color: Styles.backgroundGray,
-            child: DashboardScreen(),
-          ),
-        ),
+        // TODO: exception here ParentWidget
+        // child: Text('test')
+        child: DashboardScreen(),
+        // Container(
+        //   color: Styles.backgroundGray,
+        //   child: DashboardScreen(),
+        // ),
       ),
     );
   }
