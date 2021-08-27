@@ -2,6 +2,7 @@ import 'package:web_portfolio/index_main.dart';
 
 PreferredSizeWidget? portfolioAppBar(BuildContext context) {
   return AppBar(
+    leadingWidth: 100, // increase leading width to fit menu animation
     // APPBAR Style
     centerTitle: true,
     shadowColor: Colors.transparent,
@@ -24,25 +25,22 @@ PreferredSizeWidget? portfolioAppBar(BuildContext context) {
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
         ),
-        // TODO: fix text overflowing off leading item on the right
-        Container(
-          child: AnimatedTextKit(
-            isRepeatingAnimation: false,
-            animatedTexts: [
-              FadeAnimatedText(
-                '| MENU',
-                textStyle: Styles.smallText,
-              ),
-              FadeAnimatedText(
-                '| MENU',
-                textStyle: Styles.smallText,
-              ),
-              FadeAnimatedText(
-                '| MENU',
-                textStyle: Styles.smallText,
-              ),
-            ],
-          ),
+        AnimatedTextKit(
+          isRepeatingAnimation: false,
+          animatedTexts: [
+            FadeAnimatedText(
+              '| MENU',
+              textStyle: Styles.smallText,
+            ),
+            FadeAnimatedText(
+              '| MENU',
+              textStyle: Styles.smallText,
+            ),
+            FadeAnimatedText(
+              '| MENU',
+              textStyle: Styles.smallText,
+            ),
+          ],
         ),
       ],
     ),
