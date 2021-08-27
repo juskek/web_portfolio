@@ -29,6 +29,7 @@ export 'package:web_portfolio/components/dashboard/storage_info_card.dart'; // f
 export 'package:web_portfolio/components/dashboard/chart.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/MenuController.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/dashboard_screen.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/radar_chart.dart'; // from dashboard
 
 // PAGES
 export 'package:web_portfolio/pages/home.dart';
