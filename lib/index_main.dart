@@ -16,7 +16,7 @@ export 'package:provider/provider.dart';
 export 'package:web_portfolio/components/styles/styles.dart';
 export 'package:web_portfolio/components/animated/backspace_text.dart';
 export 'package:web_portfolio/components/launch_urls.dart';
-export 'package:web_portfolio/components/styles/appbar.dart';
+export 'package:web_portfolio/components/styles/custom_appbar.dart';
 export 'package:web_portfolio/components/responsive_ui.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/header.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/projects_featured.dart'; // from dashboard

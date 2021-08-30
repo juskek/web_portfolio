@@ -1,4 +1,4 @@
-import 'package:web_portfolio/components/styles/appbar.dart';
+import 'package:web_portfolio/components/styles/custom_appbar.dart';
 import 'package:web_portfolio/index_main.dart';
 import 'package:universal_html/html.dart' as html; // for downloading pdf
 import 'package:pdf/pdf.dart';
@@ -21,9 +21,8 @@ List projTitles = [
   "Curriculum Vitae",
 ];
 
-//TODO: fix line on bottom of jk_sb.png
 List projImages = [
-  "assets/p_t2diary.png", //TODO: fix black line on right border
+  "assets/p_t2diary.png", //TODO: fix black line on left border
   "assets/p_sentec.png",
   "assets/p_imperial.png",
 ];

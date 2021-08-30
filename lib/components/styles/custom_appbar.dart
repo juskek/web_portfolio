@@ -24,7 +24,9 @@ PreferredSizeWidget? portfolioAppBar(BuildContext context) {
           builder: (context) => IconButton(
             // flutter_svg can't handle clip and text paths properly
             // unhandled clipPath was deleted from .svg
-            icon: SvgPicture.asset('assets/jk_sb.svg'),
+            // icon: SvgPicture.asset('assets/jk_sb.svg'), // ! not rendering after deploy
+            icon: SvgPicture.network(
+                'https://raw.githubusercontent.com/juskek/web_portfolio/3971af96ed96c1a175360ff0b57753090b01fc67/assets/JK_sb.svg'),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
         ),
@@ -80,7 +82,9 @@ Widget customDrawer(BuildContext context) {
           leading: SizedBox(
             height: kToolbarHeight * 0.4,
             width: kToolbarHeight * 0.4, // stop excess width
-            child: SvgPicture.asset('assets/jk_sb.svg'),
+            // child: SvgPicture.asset('assets/jk_sb.svg'), // ! not rendering after deploy
+            child: SvgPicture.network(
+                'https://raw.githubusercontent.com/juskek/web_portfolio/3971af96ed96c1a175360ff0b57753090b01fc67/assets/JK_sb.svg'),
           ),
           title: Text('HOME'),
           onTap: () => Navigator.pushNamed(context, '/'),
