@@ -19,15 +19,15 @@ export 'package:web_portfolio/components/launch_urls.dart';
 export 'package:web_portfolio/components/styles/portfolio_appbar.dart';
 export 'package:web_portfolio/components/responsive_ui.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/header.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/my_files.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/recent_files.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/storage_details.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/projects_featured.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/projects_other.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/projects_breakdown.dart'; // from dashboard
 // export 'package:web_portfolio/components/dashboard/MyFiles.dart'; // from dashboard
 // export 'package:web_portfolio/components/dashboard/RecentFile.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/file_info_card.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/storage_info_card.dart'; // from dashboard
+// export 'package:web_portfolio/components/dashboard/card_featured.dart'; // from dashboard
+// export 'package:web_portfolio/components/dashboard/storage_info_card.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/tobedeleted/chart.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/MenuController.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/tobedeleted/MenuController.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/dashboard.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/radar_chart.dart'; // from dashboard
 

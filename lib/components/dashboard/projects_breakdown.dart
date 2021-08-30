@@ -6,11 +6,11 @@ import 'package:web_portfolio/index_main.dart';
 // import 'chart.dart';
 // import 'storage_info_card.dart';
 
-class StorageDetails extends StatelessWidget {
+class BreakdownProjects extends StatelessWidget {
   final AnimationController _controller;
   final RadarChartData _radarChartData;
 
-  const StorageDetails(
+  const BreakdownProjects(
     controller,
     radarChartData, {
     Key? key,
@@ -61,6 +61,66 @@ class StorageDetails extends StatelessWidget {
             amountOfFiles: "1.3GB",
             numOfFiles: 140,
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class StorageInfoCard extends StatelessWidget {
+  const StorageInfoCard({
+    Key? key,
+    required this.title,
+    required this.svgSrc,
+    required this.amountOfFiles,
+    required this.numOfFiles,
+  }) : super(key: key);
+
+  final String title, svgSrc, amountOfFiles;
+  final int numOfFiles;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: Styles.smallPadding),
+      padding: EdgeInsets.all(Styles.smallPadding),
+      decoration: BoxDecoration(
+        border: Border.all(width: 2, color: Styles.black.withOpacity(0.15)),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(Styles.smallPadding),
+        ),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            height: 20,
+            width: 20,
+            child: SvgPicture.asset(svgSrc),
+          ),
+          Expanded(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: Styles.smallPadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: Styles.smallText,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  Text("$numOfFiles Files", style: Styles.smallText
+                      // Theme.of(context)
+                      //     .textTheme
+                      //     .caption!
+                      //     .copyWith(color: Colors.white70),
+                      ),
+                ],
+              ),
+            ),
+          ),
+          // Text(amountOfFiles)
         ],
       ),
     );

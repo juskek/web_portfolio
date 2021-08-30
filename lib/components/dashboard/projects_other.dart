@@ -14,9 +14,9 @@ class RecentFile {
   RecentFile({this.icon, this.title, this.description});
 }
 
-class RecentFiles extends StatelessWidget {
+class OtherProjects extends StatelessWidget {
   final _otherCards;
-  const RecentFiles(
+  const OtherProjects(
     otherCards, {
     Key? key,
   })  : _otherCards = otherCards,

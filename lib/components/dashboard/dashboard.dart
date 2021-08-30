@@ -28,13 +28,13 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      FeaturedFiles(_featCards),
+                      FeaturedProjects(_featCards),
                       SizedBox(height: Styles.smallPadding),
-                      RecentFiles(_otherCards),
+                      OtherProjects(_otherCards),
                       if (Responsive.isMobile(context))
                         SizedBox(height: Styles.smallPadding),
                       if (Responsive.isMobile(context))
-                        StorageDetails(_controller, _radarChartData),
+                        BreakdownProjects(_controller, _radarChartData),
                     ],
                   ),
                 ),
@@ -44,7 +44,7 @@ class DashboardScreen extends StatelessWidget {
                 if (!Responsive.isMobile(context))
                   Expanded(
                     flex: 2,
-                    child: StorageDetails(_controller, _radarChartData),
+                    child: BreakdownProjects(_controller, _radarChartData),
                   ),
               ],
             ),
