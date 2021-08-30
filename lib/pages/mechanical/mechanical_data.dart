@@ -1,20 +1,22 @@
 import 'package:web_portfolio/index_main.dart';
 
-RadarChartData softRadarChartData = RadarChartData(
-  5,
+RadarChartData mechRadarChartData = RadarChartData(
+  3,
   4,
-  [0.7, 0.6, 0.5, 0.8, 0.75],
-  ['A', 'B', 'C', 'D', 'E'],
+  [
+    0.7,
+    0.6,
+    0.5,
+  ],
+  ['A', 'B', 'C'],
 );
 
-List softFeat = [
+List mechFeat = [
   DashboardFeatData(
-    title: "Web Portfolio",
+    title: "Mech1",
     numOfFiles: 1328,
-    // ! unhandled metadata color filter null
     // svgSrc: "assets/jk_sb.svg",
-    // svgSrc: "assets/icons/google_drive.svg",
-    svgSrc: "assets/medium.svg",
+    svgSrc: "assets/icons/google_drive.svg",
     totalStorage: "1.9GB",
     color: Styles.black,
     percentage: 35,
@@ -45,7 +47,7 @@ List softFeat = [
   ),
 ];
 
-List softOther = [
+List mechOther = [
   DashboardOtherData(
     icon: "assets/icons/xd_file.svg",
     title: "Proj 1",

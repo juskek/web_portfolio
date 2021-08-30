@@ -6,12 +6,12 @@ import 'package:web_portfolio/index_main.dart';
 // import 'package:flutter_svg/svg.dart';
 
 // import '../../../constants.dart';
-class RecentFile {
+class DashboardOtherData {
   // final String? icon, title, date, size;
   final String? icon, title, description;
 
-  // RecentFile({this.icon, this.title, this.date, this.size});
-  RecentFile({this.icon, this.title, this.description});
+  // DashboardOtherData({this.icon, this.title, this.date, this.size});
+  DashboardOtherData({this.icon, this.title, this.description});
 }
 
 class OtherProjects extends StatelessWidget {
@@ -34,10 +34,10 @@ class OtherProjects extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Everything Else",
-            style: Theme.of(context).textTheme.subtitle1,
-          ),
+          // Text(
+          //   "Everything Else",
+          //   style: Theme.of(context).textTheme.subtitle1,
+          // ),
           SizedBox(
             width: double.infinity,
             child: DataTable2(
@@ -66,7 +66,7 @@ class OtherProjects extends StatelessWidget {
   }
 }
 
-DataRow recentFileDataRow(RecentFile fileInfo) {
+DataRow recentFileDataRow(DashboardOtherData fileInfo) {
   return DataRow(
     cells: [
       DataCell(

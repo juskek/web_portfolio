@@ -4,12 +4,12 @@ import 'package:web_portfolio/index_main.dart';
 // import '../../../constants.dart';
 // import 'file_info_card.dart';
 
-class CloudStorageInfo {
+class DashboardFeatData {
   final String? svgSrc, title, totalStorage;
   final int? numOfFiles, percentage;
   final Color? color;
 
-  CloudStorageInfo({
+  DashboardFeatData({
     this.svgSrc,
     this.title,
     this.totalStorage,
@@ -32,7 +32,7 @@ class FeaturedProjects extends StatelessWidget {
     final Size _size = MediaQuery.of(context).size;
     return Column(
       children: [
-        Text('Software Projects', style: Styles.boldIntroCompact),
+        // Text('Software Projects', style: Styles.boldIntroCompact),
         // Row(
         //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
         //   children: [
@@ -108,7 +108,7 @@ class FileInfoCard extends StatelessWidget {
     required this.info,
   }) : super(key: key);
 
-  final CloudStorageInfo info;
+  final DashboardFeatData info;
 
   @override
   Widget build(BuildContext context) {

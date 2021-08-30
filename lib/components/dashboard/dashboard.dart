@@ -1,13 +1,16 @@
 import 'package:web_portfolio/index_main.dart';
 
 class DashboardScreen extends StatelessWidget {
+  final String _headerTitle;
   final _featCards;
   final _otherCards;
   final AnimationController _controller;
   final RadarChartData _radarChartData;
 
-  const DashboardScreen(featCards, otherCards, controller, radarChartData)
-      : _featCards = featCards,
+  const DashboardScreen(
+      headerTitle, featCards, otherCards, controller, radarChartData)
+      : _headerTitle = headerTitle,
+        _featCards = featCards,
         _otherCards = otherCards,
         _controller = controller,
         _radarChartData = radarChartData;
@@ -28,6 +31,7 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
+                      Text(_headerTitle, style: Styles.boldIntroCompact),
                       FeaturedProjects(_featCards),
                       SizedBox(height: Styles.smallPadding),
                       OtherProjects(_otherCards),

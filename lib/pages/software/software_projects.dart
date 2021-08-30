@@ -26,8 +26,8 @@ class _SoftPageState extends State<SoftPage> with TickerProviderStateMixin {
     return Scaffold(
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
-      body:
-          DashboardScreen(softFeat, softOther, _controller, softRadarChartData),
+      body: DashboardScreen('Software Projects (UNDER CONSTRUCTION)', softFeat,
+          softOther, _controller, softRadarChartData),
     );
   }
 }
