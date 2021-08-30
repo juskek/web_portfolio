@@ -86,7 +86,6 @@ class FileInfoCardGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('Reached gridview builder');
     return GridView.builder(
       clipBehavior: Clip.none, // prevent shadows from getting clipped by parent
       physics: NeverScrollableScrollPhysics(),

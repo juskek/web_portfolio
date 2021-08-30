@@ -9,15 +9,15 @@ export 'package:flutter_svg/flutter_svg.dart';
 // export 'package:flutter_svg/svg.dart';
 export 'package:data_table_2/data_table_2.dart';
 export 'package:provider/provider.dart';
-export 'package:fl_chart/fl_chart.dart';
+// export 'package:fl_chart/fl_chart.dart';
 
 /// WEB PORTFOLIO
 // COMPONENTS
-export 'package:web_portfolio/styles.dart';
-export 'package:web_portfolio/components/backspace_text.dart';
+export 'package:web_portfolio/components/styles/styles.dart';
+export 'package:web_portfolio/components/animated/backspace_text.dart';
 export 'package:web_portfolio/components/launch_urls.dart';
-export 'package:web_portfolio/components/portfolio_appbar.dart';
-export 'package:web_portfolio/components/dashboard/responsive.dart'; // from dashboard
+export 'package:web_portfolio/components/styles/portfolio_appbar.dart';
+export 'package:web_portfolio/components/responsive_ui.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/header.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/my_files.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/recent_files.dart'; // from dashboard
@@ -26,9 +26,9 @@ export 'package:web_portfolio/components/dashboard/storage_details.dart'; // fro
 // export 'package:web_portfolio/components/dashboard/RecentFile.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/file_info_card.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/storage_info_card.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/chart.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/tobedeleted/chart.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/MenuController.dart'; // from dashboard
-export 'package:web_portfolio/components/dashboard/dashboard_screen.dart'; // from dashboard
+export 'package:web_portfolio/components/dashboard/dashboard.dart'; // from dashboard
 export 'package:web_portfolio/components/dashboard/radar_chart.dart'; // from dashboard
 
 // PAGES

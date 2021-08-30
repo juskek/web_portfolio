@@ -7,9 +7,16 @@ import 'package:web_portfolio/index_main.dart';
 // import 'storage_info_card.dart';
 
 class StorageDetails extends StatelessWidget {
-  const StorageDetails({
+  final AnimationController _controller;
+  final RadarChartData _radarChartData;
+
+  const StorageDetails(
+    controller,
+    radarChartData, {
     Key? key,
-  }) : super(key: key);
+  })  : _controller = controller,
+        _radarChartData = radarChartData,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +32,11 @@ class StorageDetails extends StatelessWidget {
         children: [
           Text("Skills", style: Styles.normalText),
           SizedBox(height: Styles.smallPadding),
-          Chart(),
+          // Chart(),
+          Container(
+              height: 200,
+              child: Center(
+                  child: RadarChartTransition(_controller, _radarChartData))),
           StorageInfoCard(
             svgSrc: "assets/icons/Documents.svg",
             title: "Data Structures & Algorithms",

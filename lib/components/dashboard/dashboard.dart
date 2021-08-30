@@ -3,10 +3,14 @@ import 'package:web_portfolio/index_main.dart';
 class DashboardScreen extends StatelessWidget {
   final _featCards;
   final _otherCards;
+  final AnimationController _controller;
+  final RadarChartData _radarChartData;
 
-  const DashboardScreen(featCards, otherCards)
+  const DashboardScreen(featCards, otherCards, controller, radarChartData)
       : _featCards = featCards,
-        _otherCards = otherCards;
+        _otherCards = otherCards,
+        _controller = controller,
+        _radarChartData = radarChartData;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,10 +30,11 @@ class DashboardScreen extends StatelessWidget {
                     children: [
                       FeaturedFiles(_featCards),
                       SizedBox(height: Styles.smallPadding),
-                      // RecentFiles(_otherCards),
+                      RecentFiles(_otherCards),
                       if (Responsive.isMobile(context))
                         SizedBox(height: Styles.smallPadding),
-                      if (Responsive.isMobile(context)) StorageDetails(),
+                      if (Responsive.isMobile(context))
+                        StorageDetails(_controller, _radarChartData),
                     ],
                   ),
                 ),
@@ -39,7 +44,7 @@ class DashboardScreen extends StatelessWidget {
                 if (!Responsive.isMobile(context))
                   Expanded(
                     flex: 2,
-                    child: StorageDetails(),
+                    child: StorageDetails(_controller, _radarChartData),
                   ),
               ],
             ),

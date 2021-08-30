@@ -1,5 +1,6 @@
 // import 'package:web_portfolio/components/portfolio_appbar.dart';
 import 'package:web_portfolio/index_main.dart';
+import 'package:web_portfolio/pages/software/software_data.dart';
 
 class ExperimentalPage extends StatefulWidget {
   const ExperimentalPage({Key? key}) : super(key: key);
@@ -31,10 +32,8 @@ class _ExperimentalPageState extends State<ExperimentalPage>
     return Scaffold(
       appBar: portfolioAppBar(context),
       drawer: customDrawer(context),
-      // body: underConstruction(context),
-      body: Center(
-          child:
-              RadarChartTransition(_controller, nodes, segments, data, labels)),
+      body: underConstruction(context),
+      // body: Center(child: RadarChartTransition(_controller, radarChartData)),
     );
   }
 }

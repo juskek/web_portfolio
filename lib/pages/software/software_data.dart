@@ -26,6 +26,13 @@ import 'package:web_portfolio/index_main.dart';
 //   });
 // }
 
+RadarChartData softRadarChartData = RadarChartData(
+  5,
+  4,
+  [0.7, 0.6, 0.5, 0.8, 0.75],
+  ['A', 'B', 'C', 'D', 'E'],
+);
+
 List softFeat = [
   CloudStorageInfo(
     title: "Soft1",

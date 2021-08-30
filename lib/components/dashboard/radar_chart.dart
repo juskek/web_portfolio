@@ -3,6 +3,19 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
+class RadarChartData {
+  int nodes, segments;
+  List<double> data;
+  List<String> labels;
+
+  RadarChartData(
+    this.nodes,
+    this.segments,
+    this.data,
+    this.labels,
+  );
+}
+
 class RadarChartTransition extends AnimatedWidget {
   final AnimationController controller;
   final int nodes;
@@ -13,11 +26,12 @@ class RadarChartTransition extends AnimatedWidget {
   // CONSTRUCTOR
   RadarChartTransition(
     this.controller,
-    this.nodes,
-    this.segments,
-    this.data,
-    this.labels,
-  ) : super(listenable: controller);
+    RadarChartData radarChartData,
+  )   : this.nodes = radarChartData.nodes,
+        this.segments = radarChartData.segments,
+        this.data = radarChartData.data,
+        this.labels = radarChartData.labels,
+        super(listenable: controller);
 
   // GETTER
   AnimationController get _animationController =>

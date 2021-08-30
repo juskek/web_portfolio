@@ -1,4 +1,4 @@
-import 'package:web_portfolio/components/portfolio_appbar.dart';
+import 'package:web_portfolio/components/styles/portfolio_appbar.dart';
 import 'package:web_portfolio/index_main.dart';
 import 'package:universal_html/html.dart' as html; // for downloading pdf
 import 'package:pdf/pdf.dart';
