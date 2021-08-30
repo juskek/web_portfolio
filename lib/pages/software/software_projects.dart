@@ -1,4 +1,4 @@
-import 'package:web_portfolio/components/styles/portfolio_appbar.dart';
+import 'package:web_portfolio/components/styles/appbar.dart';
 import 'package:web_portfolio/index_main.dart';
 import 'software_data.dart';
 

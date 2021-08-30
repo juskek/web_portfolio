@@ -22,7 +22,9 @@ PreferredSizeWidget? portfolioAppBar(BuildContext context) {
       children: [
         Builder(
           builder: (context) => IconButton(
-            icon: Image.asset('assets/jk_sb.png'),
+            // flutter_svg can't handle clip and text paths properly
+            // unhandled clipPath was deleted from .svg
+            icon: SvgPicture.asset('assets/jk_sb.svg'),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
         ),
@@ -52,17 +54,16 @@ PreferredSizeWidget? portfolioAppBar(BuildContext context) {
         onPressed: () => launchURL(mediumURL),
         // TODO: render svg asset
         icon: SvgPicture.asset('assets/medium.svg'),
-        // icon: Image.asset('assets/linkedin.png'),
         splashRadius: kToolbarHeight * 0.4,
       ),
       IconButton(
         onPressed: () => launchURL(linkedinURL),
-        icon: Image.asset('assets/linkedin.png'),
+        icon: SvgPicture.asset('assets/linkedin.svg'),
         splashRadius: kToolbarHeight * 0.4,
       ),
       IconButton(
         onPressed: () => launchURL(githubURL),
-        icon: Image.asset('assets/github.png'),
+        icon: SvgPicture.asset('assets/github.svg'),
         splashRadius: kToolbarHeight * 0.4,
       ),
     ],
@@ -74,12 +75,12 @@ Widget customDrawer(BuildContext context) {
     child: ListView(
       padding: EdgeInsets.zero,
       children: [
+        // TODO: style first row so that logo and height matches scaffold
         ListTile(
           leading: SizedBox(
             height: kToolbarHeight * 0.4,
-            child: Image.asset(
-              'assets/jk_sb.png',
-            ),
+            width: kToolbarHeight * 0.4, // stop excess width
+            child: SvgPicture.asset('assets/jk_sb.svg'),
           ),
           title: Text('HOME'),
           onTap: () => Navigator.pushNamed(context, '/'),

@@ -5,18 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="512"
    height="512"
    viewBox="0 0 135.46666 135.46667"
    version="1.1"
-   id="svg8"
-   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
-   sodipodi:docname="JK_sb.svg"
-   inkscape:export-filename="/Users/justinkek/Desktop/jk.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   id="svg8">
   <defs
      id="defs2">
     <rect
@@ -25,103 +18,28 @@
        width="76.279029"
        height="62.555187"
        id="rect853" />
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath893">
-      <rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.492093;stroke-opacity:1"
-         id="rect895"
-         width="61.753311"
-         height="105.35748"
-         x="87.235382"
-         y="14.551056" />
-    </clipPath>
   </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.91183774"
-     inkscape:cx="90.786129"
-     inkscape:cy="194.47946"
-     inkscape:document-units="px"
-     inkscape:current-layer="g904"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     units="px"
-     inkscape:window-width="1536"
-     inkscape:window-height="852"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0"
-     inkscape:snap-text-baseline="true"
-     objecttolerance="20"
-     guidetolerance="20"
-     gridtolerance="10" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1">
     <g
        id="g904"
        transform="translate(5.4949662,1.8512562)">
       <g
-         id="g33"
-         transform="translate(-4.9328038)"
-         inkscape:export-filename="/Users/justinkek/Desktop/g33.png"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96">
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:136.878px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-           x="58.96674"
-           y="113.30148"
-           id="text859"
-           clip-path="url(#clipPath893)"
-           transform="translate(-21.295182,0.22006228)"><tspan
-             sodipodi:role="line"
-             id="tspan857"
-             x="58.96674"
-             y="113.30148"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:136.878px;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">K</tspan></text>
+         id="g1586"
+         transform="matrix(1.0695493,0,0,1.0695493,-9.4547952,-4.5897351)">
         <g
-           id="g885">
+           id="g2279">
           <g
-             id="g879">
-            <text
-               xml:space="preserve"
-               style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:136.878px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-               x="4.3590755"
-               y="113.30148"
-               id="text863"><tspan
-                 sodipodi:role="line"
-                 id="tspan861"
-                 x="4.3590755"
-                 y="113.30148"
-                 style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:136.878px;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">J</tspan></text>
+             id="g2321">
+            <g
+               id="g2405">
+              <path
+                 id="path2323"
+                 style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:136.878px;line-height:1.25;font-family:'SF Pro Display';-inkscape-font-specification:'SF Pro Display, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06955"
+                 d="M 46.011719 57.587891 L 46.011719 129.95508 L 194.47852 129.95508 L 194.47852 323.64844 C 194.47852 363.0937 176.10495 383.89844 141.79297 383.89844 C 109.64237 383.89844 91.811804 362.82384 90.460938 332.56445 L 90.191406 330.94336 L 11.029297 330.94336 L 11.300781 333.375 C 13.191993 406.59191 62.091944 454.41406 142.60352 454.41406 C 227.16769 454.41406 276.07031 406.5916 276.07031 324.45898 L 276.07031 299.54102 L 289.70117 282.82617 L 404.79492 447.63086 L 502.32812 447.63086 L 348.86914 229.60156 L 492.33203 57.771484 L 401.55273 57.771484 L 276.07031 210.01172 L 276.07031 57.798828 L 273.90625 57.798828 L 273.90625 57.587891 L 46.011719 57.587891 z "
+                 transform="matrix(0.24737834,0,0,0.24737834,3.7023342,2.5604046)" />
+            </g>
           </g>
-          <rect
-             style="fill:#000000;fill-opacity:1;stroke-width:0.375431"
-             id="rect873"
-             width="56.37608"
-             height="17.902349"
-             x="15.084808"
-             y="16.806162" />
         </g>
       </g>
     </g>
