@@ -162,7 +162,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     if ((helloAnimated == true) & (roleAnimated == false)) {
       // ============= TYPEWRITER EXISTING TEXT =============
       return Container(
-        color: Styles.backgroundGray,
         child: SizedBox(
           width: (screenWidth - Styles.largePadding * 2), // wrap text
           child: AnimatedTextKit(
@@ -219,6 +218,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   final CanvasNestConfig nestConfig = CanvasNestConfig(100, 1,
       Colors.grey.withAlpha(200), Colors.grey.withAlpha(200), 120, 0.02);
 
+  List<NodeInfo> nodeInfoList = List<NodeInfo>.empty();
+
   late final AnimationController _canvasNestController = AnimationController(
     duration: Duration(seconds: 30), // ANITIME
     vsync: this,
@@ -251,10 +252,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     // CANVAS NEST INIT
     screenSize = ScreenSize(MediaQuery.of(context).size.width,
         MediaQuery.of(context).size.height - kToolbarHeight);
-
-    List<NodeInfo> nodeInfoList =
-        generateNodeInfo(context, nestConfig, screenSize);
-
+    if (nodeInfoList.isEmpty) {
+      nodeInfoList = generateNodeInfo(context, nestConfig, screenSize);
+    }
     return Scaffold(
       backgroundColor: Styles.backgroundGray,
       // ========================= APPBAR =========================
