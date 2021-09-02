@@ -4,6 +4,7 @@ import 'package:universal_html/html.dart' as html; // for downloading pdf
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'dart:io' as io;
+import 'package:flutter_canvasnest/flutter_canvasnest.dart';
 
 // ========================= GLOBAL VARIABLES =========================
 // EDITABLE TEXT
@@ -66,7 +67,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void _helloFinished() {
     setState(() {
       helloAnimated = true;
@@ -152,12 +153,6 @@ class _HomePageState extends State<HomePage> {
     _projContainer(1),
     _projContainer(2),
   ];
-  // final List<Widget> _pages = <Widget>[
-  //   new FlutterLogo(textColor: Colors.blue),
-  //   new FlutterLogo(style: FlutterLogoStyle.stacked, textColor: Colors.red),
-  //   new FlutterLogo(
-  //       style: FlutterLogoStyle.horizontal, textColor: Colors.green),
-  // ];
 
   Widget _buildPageItem(BuildContext context, int index) {
     return new FeaturePage(page: _pages[index], idx: index);
@@ -219,6 +214,18 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  // CANVAS NEST PARAMETERS
+  ScreenSize screenSize = ScreenSize(0, 0); // init screen size
+  final CanvasNestConfig nestConfig = CanvasNestConfig(100, 1,
+      Colors.grey.withAlpha(200), Colors.grey.withAlpha(200), 120, 0.02);
+
+  late final AnimationController _canvasNestController = AnimationController(
+    duration: Duration(seconds: 30), // ANITIME
+    vsync: this,
+  )..repeat();
+  // repeat animation progress so that transition keeps building (see listenable)
+
+  // INIT AND DISPOSE
   @override
   void initState() {
     super.initState();
@@ -228,6 +235,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     _pageController.dispose();
+    _canvasNestController.dispose();
     super.dispose();
   }
 
@@ -240,6 +248,13 @@ class _HomePageState extends State<HomePage> {
       uiState = 'REGULAR';
     }
 
+    // CANVAS NEST INIT
+    screenSize = ScreenSize(MediaQuery.of(context).size.width,
+        MediaQuery.of(context).size.height - kToolbarHeight);
+
+    List<NodeInfo> nodeInfoList =
+        generateNodeInfo(context, nestConfig, screenSize);
+
     return Scaffold(
       backgroundColor: Styles.backgroundGray,
       // ========================= APPBAR =========================
@@ -249,104 +264,110 @@ class _HomePageState extends State<HomePage> {
       // ========================= MAIN BODY =========================
       // MAIN BODY
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Stack(
           children: [
-            // ----------------- TOP ROW -----------------
-            // TOP ROW: PADDING FROM TOP
-            SizedBox(height: Styles.smallPadding),
-            Flexible(
-              flex: 3,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  // TOP ROW: PADDING FROM LEFT
-                  SizedBox(width: Styles.largePadding),
-
-                  // TOP ROW: INTRO TEXT
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+            CanvasNestTransition(
+                _canvasNestController, nestConfig, nodeInfoList, screenSize),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // ----------------- TOP ROW -----------------
+                // TOP ROW: PADDING FROM TOP
+                SizedBox(height: Styles.smallPadding),
+                Flexible(
+                  flex: 3,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      // ANIMATE HELLO TEXT
-                      AnimatedTextKit(
-                        isRepeatingAnimation: false,
-                        onFinished: _helloFinished,
-                        // totalRepeatCount: 1,
-                        animatedTexts: [
-                          TypewriterAnimatedText("Hello, I'm Justin,",
-                              textStyle: Styles
-                                  .boldIntroCompact, // TODO:L conditional font size COMPACT/REGULAR
-                              cursor: '|',
-                              speed: Duration(milliseconds: typingSpeed)),
+                      // TOP ROW: PADDING FROM LEFT
+                      SizedBox(width: Styles.largePadding),
+
+                      // TOP ROW: INTRO TEXT
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // ANIMATE HELLO TEXT
+                          AnimatedTextKit(
+                            isRepeatingAnimation: false,
+                            onFinished: _helloFinished,
+                            // totalRepeatCount: 1,
+                            animatedTexts: [
+                              TypewriterAnimatedText("Hello, I'm Justin,",
+                                  textStyle: Styles
+                                      .boldIntroCompact, // TODO:L conditional font size COMPACT/REGULAR
+                                  cursor: '|',
+                                  speed: Duration(milliseconds: typingSpeed)),
+                            ],
+                          ),
+
+                          // ANIMATE ROLE TEXT
+                          updateRoleText(),
                         ],
                       ),
-
-                      // ANIMATE ROLE TEXT
-                      updateRoleText(),
                     ],
                   ),
-                ],
-              ),
-            ),
-            // ----------------- MIDDLE ROW -----------------
-            Flexible(
-              flex: 7,
-              // MIDDLE ROW: STACK
-              child: Stack(
-                children: <Widget>[
-                  // MIDDLE ROW: LIST
-                  new PageView.builder(
-                    // TODO:L call pagechange functions with scroll
-                    // reenable always scrollable after enabling scroll pagechange functions
-                    // physics: new AlwaysScrollableScrollPhysics(),
-                    physics: new NeverScrollableScrollPhysics(),
-                    controller: _pageController,
-                    itemCount: _pages.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return _buildPageItem(context, index % _pages.length);
-                    },
-                  ),
-                ],
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // MIDDLE ROW: LEFT ARROW
-                IconButton(
-                  onPressed: _pageLeft,
-                  icon: Icon(Icons.keyboard_arrow_left),
-                  color: Styles.gray,
-                  iconSize: 40,
-                  splashRadius: 20,
                 ),
-                // MIDDLE ROW: DOTS INDICATOR
-                new Container(
-                  // color: Colors.grey[800].withOpacity(0.5),
-                  color: Styles.transparent,
-                  padding: const EdgeInsets.all(20.0),
-                  child: new Center(
-                    child: new DotsIndicator(
-                      controller: _pageController,
-                      itemCount: _pages.length,
-                      onPageSelected: (int page) {
-                        _pageController.animateToPage(
-                          page,
-                          duration: _kDuration,
-                          curve: _kCurve,
-                        );
-                      },
+                // ----------------- MIDDLE ROW -----------------
+                Flexible(
+                  flex: 7,
+                  // MIDDLE ROW: STACK
+                  child: Stack(
+                    children: <Widget>[
+                      // MIDDLE ROW: LIST
+                      new PageView.builder(
+                        // TODO:L call pagechange functions with scroll
+                        // reenable always scrollable after enabling scroll pagechange functions
+                        // physics: new AlwaysScrollableScrollPhysics(),
+                        physics: new NeverScrollableScrollPhysics(),
+                        controller: _pageController,
+                        itemCount: _pages.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return _buildPageItem(context, index % _pages.length);
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // MIDDLE ROW: LEFT ARROW
+                    IconButton(
+                      onPressed: _pageLeft,
+                      icon: Icon(Icons.keyboard_arrow_left),
+                      color: Styles.gray,
+                      iconSize: 40,
+                      splashRadius: 20,
                     ),
-                  ),
-                ),
-                // MIDDLE ROW: RIGHT ARROW
-                IconButton(
-                  onPressed: _pageRight,
-                  icon: Icon(Icons.keyboard_arrow_right),
-                  color: Styles.gray,
-                  iconSize: 40,
-                  splashRadius: 20,
+                    // MIDDLE ROW: DOTS INDICATOR
+                    new Container(
+                      // color: Colors.grey[800].withOpacity(0.5),
+                      color: Styles.transparent,
+                      padding: const EdgeInsets.all(20.0),
+                      child: new Center(
+                        child: new DotsIndicator(
+                          controller: _pageController,
+                          itemCount: _pages.length,
+                          onPageSelected: (int page) {
+                            _pageController.animateToPage(
+                              page,
+                              duration: _kDuration,
+                              curve: _kCurve,
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                    // MIDDLE ROW: RIGHT ARROW
+                    IconButton(
+                      onPressed: _pageRight,
+                      icon: Icon(Icons.keyboard_arrow_right),
+                      color: Styles.gray,
+                      iconSize: 40,
+                      splashRadius: 20,
+                    ),
+                  ],
                 ),
               ],
             ),
