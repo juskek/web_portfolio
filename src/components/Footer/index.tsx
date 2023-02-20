@@ -1,6 +1,6 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Graphic } from "../../common/Graphic";
+import { GraphicAtom } from "../../common/GraphicAtom";
 import Container from "../../common/Container";
 
 import i18n from "i18next";
@@ -40,7 +40,7 @@ const Footer = ({ t }: any) => {
         key={src}
         aria-label={src}
       >
-        <Graphic src={src} width="25px" height="25px" />
+        <GraphicAtom src={src} width="25px" height="25px" />
       </a>
     );
   };
@@ -106,7 +106,7 @@ const Footer = ({ t }: any) => {
               <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
-                  <Graphic
+                  <GraphicAtom
                     src="united-states.svg"
                     aria-label="homepage"
                     width="30px"
@@ -114,7 +114,7 @@ const Footer = ({ t }: any) => {
                   />
                 </LanguageSwitch>
                 <LanguageSwitch onClick={() => handleChange("es")}>
-                  <Graphic
+                  <GraphicAtom
                     src="spain.svg"
                     aria-label="homepage"
                     width="30px"
@@ -135,7 +135,7 @@ const Footer = ({ t }: any) => {
           >
             <NavLink to="/">
               <LogoContainer>
-                <Graphic
+                <GraphicAtom
                   src="logo.svg"
                   aria-label="homepage"
                   width="101px"

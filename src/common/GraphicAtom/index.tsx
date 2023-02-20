@@ -1,6 +1,6 @@
 import { GraphicProps } from "../types";
 
-export const Graphic = ({ src, width, height }: GraphicProps) : JSX.Element => {
+export const GraphicAtom = ({ src, width, height }: GraphicProps) : JSX.Element => {
   if (src.includes('https://')) {
     // Network Image
     return (

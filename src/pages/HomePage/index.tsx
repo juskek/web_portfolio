@@ -19,7 +19,7 @@ const Home = () => {
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
-        graphic="developer.svg"
+        graphicSrc="developer.svg"
         graphicWidth="100%"
         graphicHeight="100%"
         id="intro"
@@ -34,16 +34,16 @@ const Home = () => {
         title={ProjectOneContent.title}
         content={ProjectOneContent.text}
         section={ProjectOneContent.section}
-        graphic={ProjectOneContent.graphic}
+        graphicSrc={ProjectOneContent.graphicSrc}
         graphicWidth={ProjectOneContent.graphicWidth}
         graphicHeight={ProjectOneContent.graphicHeight}
         id="about"
       />
-      <ContentBlock
+      {/* <ContentBlock
         type="right"
         title={MissionContent.title}
         content={MissionContent.text}
-        graphic="product-launch.svg"
+        graphicSrc="product-launch.svg"
         graphicWidth="100%"
         graphicHeight="100%"
         id="mission"
@@ -52,7 +52,7 @@ const Home = () => {
         type="left"
         title={ProductContent.title}
         content={ProductContent.text}
-        graphic="waving.svg"
+        graphicSrc="waving.svg"
         graphicWidth="100%"
         graphicHeight="100%"
         id="product"
@@ -61,7 +61,7 @@ const Home = () => {
         title={ContactContent.title}
         content={ContactContent.text}
         id="contact"
-      />
+      /> */}
     </Container>
   );
 };

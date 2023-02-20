@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
-import { Graphic } from "../../common/Graphic";
+import { GraphicAtom } from "../../common/GraphicAtom";
 import { Button } from "../../common/Button";
 import {
   HeaderSection,
@@ -63,7 +63,7 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <Graphic src="logo.svg" width="101px" height="64px" />
+            <GraphicAtom src="logo.svg" width="101px" height="64px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

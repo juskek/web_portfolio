@@ -1,6 +1,6 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Graphic } from "../../../common/Graphic";
+import { GraphicAtom } from "../../../common/GraphicAtom";
 import { ContentBlockProps } from "../types";
 import { Fade } from "react-awesome-reveal";
 import {
@@ -13,7 +13,7 @@ import {
 } from "./styles";
 
 const LeftContentBlock = ({
-  graphic,
+  graphicSrc,
   graphicWidth,
   graphicHeight,
   title,
@@ -28,7 +28,7 @@ const LeftContentBlock = ({
       <Fade direction="left">
         <Row justify="space-between" align="middle" id={id}>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <Graphic src={graphic} width={graphicWidth} height={graphicHeight}/>
+            <GraphicAtom src={graphicSrc} width={graphicWidth} height={graphicHeight}/>
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
@@ -40,7 +40,7 @@ const LeftContentBlock = ({
                     section.map((item: any, id: number) => {
                       return (
                         <Col key={id} span={11}>
-                          <Graphic src={item.icon} width={graphicWidth} height={graphicHeight}/>
+                          <GraphicAtom src={item.graphicSrc} width={item.graphicWidth} height={item.graphicHeight}/>
                           <MinTitle>{t(item.title)}</MinTitle>
                           <MinPara>{t(item.content)}</MinPara>
                         </Col>

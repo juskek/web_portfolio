@@ -1,5 +1,5 @@
 export interface ContentBlockProps {
-  graphic: string;
+  graphicSrc: string;
   graphicWidth: string;
   graphicHeight: string;
   title: string;

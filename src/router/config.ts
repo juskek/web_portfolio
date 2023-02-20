@@ -2,7 +2,7 @@ const routes = [
   {
     path: ["/", "/home"],
     exact: true,
-    component: "Home",
+    component: "HomePage",
   },
   {
     path: ["/video"],

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Graphic } from "../Graphic";
+import { GraphicAtom } from "../GraphicAtom";
 import { ScrollUpContainer } from "./styles";
 import { getScroll } from "../utils/getWindow";
 
@@ -35,7 +35,7 @@ const ScrollToTop = () => {
 
   return (
     <ScrollUpContainer onClick={scrollUp} show={showScroll}>
-      <Graphic src="scroll-top.svg" width="20px" height="20px" />
+      <GraphicAtom src="scroll-top.svg" width="20px" height="20px" />
     </ScrollUpContainer>
   );
 };
