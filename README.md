@@ -1,10 +1,8 @@
-![landy](https://user-images.githubusercontent.com/48876996/121569479-e179db80-ca31-11eb-8a48-9c3de9b142f3.gif)
 
-![Landy React Template License](https://img.shields.io/github/license/Adrinlol/landy-react-template)
-![Landy React Template Release Date](https://img.shields.io/github/release-date/Adrinlol/landy-react-template)
-![Landy React TemplateStars](https://img.shields.io/github/stars/Adrinlol/landy-react-template)
-![Landy React Template Language](https://img.shields.io/github/languages/top/Adrinlol/landy-react-template)
-![Landy React Template TypeScript](https://badgen.net/npm/types/tslib)
+## Packages Used
+
+* ReactRouter: 
+
 
 ## Free React landing page template
 
@@ -14,6 +12,7 @@ This React template comes with multi-lingual support, smooth animations, set of 
 
 ## Table of contents
 
+- [Packages Used](#packages-used)
 - [Free React landing page template](#free-react-landing-page-template)
 - [Table of contents](#table-of-contents)
 - [Features](#features)
@@ -112,7 +111,7 @@ Use it for whatever you want, and be sure to reach out to me on [Twitter](https:
 
 ## License
 
-Licensed under the MIT license.
+Licensed under the MIT license from https://github.com/Adrinlol/landy-react-template.
 
 <!-- prettier-ignore-start -->
 [axios]: https://github.com/axios/axios
