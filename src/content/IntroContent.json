@@ -1,13 +1,17 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Hey there! I'm Justin.",
+  "text": "I am an engineer and avid creator, and bringing joy through the things I create makes me feel alive. This website is a reflection of my journey, my accomplishments, and my aspirations; if you have any questions or opportunities, please don't hesitate to reach out. Enjoy your visit!",
   "button": [
     {
-      "title": "Explore"
+      "title": "Explore",
+      "onClickMode": "scrollTo",
+      "onClickDestination": "about"
     },
     {
-      "title": "Learn more",
-      "color": "#fff"
+      "title": "My CV",
+      "color": "#fff",
+      "onClickMode": "navigateTo",
+      "onClickDestination": "https://www.linkedin.com/in/justinkek/"
     }
   ]
 }

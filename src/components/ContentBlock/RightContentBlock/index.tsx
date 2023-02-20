@@ -25,6 +25,19 @@ const RightBlock = ({
       behavior: "smooth",
     });
   };
+  const onClickSwitch = (onClickMode: string, onClickDestination: string) => {
+    switch(onClickMode) {
+      case 'navigateTo':
+        window.open(onClickDestination);
+        break;
+      case 'scrollTo':
+        scrollTo(onClickDestination);
+        break;
+      default:
+        break;
+    }
+  
+  }
   return (
     <RightBlockContainer>
       <Fade direction="right">
@@ -41,7 +54,8 @@ const RightBlock = ({
                         key={id}
                         color={item.color}
                         fixedWidth={true}
-                        onClick={() => scrollTo("about")}
+                        onClick={() => onClickSwitch(item.onClickMode, item.onClickDestination)}
+                        // onClick={() => scrollTo("about")}
                       >
                         {t(item.title)}
                       </Button>
