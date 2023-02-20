@@ -15,6 +15,7 @@ export interface GraphicProps {
   src: string;
   width: string;
   height: string;
+  onClickSrc?: string;
 }
 
 export interface InputProps {

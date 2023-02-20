@@ -40,7 +40,7 @@ const LeftContentBlock = ({
                     section.map((item: any, id: number) => {
                       return (
                         <Col key={id} span={11}>
-                          <GraphicAtom src={item.graphicSrc} width={item.graphicWidth} height={item.graphicHeight}/>
+                          <GraphicAtom src={item.graphicSrc} width={item.graphicWidth} height={item.graphicHeight} onClickSrc={item.graphicOnClickSrc}/>
                           <MinTitle>{t(item.title)}</MinTitle>
                           <MinPara>{t(item.content)}</MinPara>
                         </Col>
