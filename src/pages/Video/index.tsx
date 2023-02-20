@@ -1,7 +1,7 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
+import IntroContent from "../../content/Home/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
+import ProjectOneContent from "../../content/Home/ProjectOneContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
@@ -16,7 +16,7 @@ const Video = () => {
   return (
     <Container>
       <ScrollToTop />
-      <ContentBlock
+      {/* <ContentBlock
         type="right"
         title={IntroContent.title}
         content={IntroContent.text}
@@ -55,7 +55,7 @@ const Video = () => {
         title={ContactContent.title}
         content={ContactContent.text}
         id="contact"
-      />
+      /> */}
     </Container>
   );
 };

@@ -15,7 +15,7 @@ const RightBlock = ({
   title,
   content,
   button,
-  icon,
+  graphic,
   t,
   id,
 }: ContentBlockProps) => {
@@ -65,7 +65,7 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            <SvgIcon src={graphic} width="100%" height="100%" />
           </Col>
         </Row>
       </Fade>

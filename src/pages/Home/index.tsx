@@ -1,13 +1,11 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
+import IntroContent from "../../content/Home/IntroContent.json";
+import ProjectOneContent from "../../content/Home/ProjectOneContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
@@ -21,7 +19,9 @@ const Home = () => {
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
-        icon="developer.svg"
+        graphic="developer.svg"
+        graphicWidth="100%"
+        graphicHeight="100%"
         id="intro"
       />
       {/* <MiddleBlock
@@ -31,24 +31,30 @@ const Home = () => {
       /> */}
       <ContentBlock
         type="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
+        title={ProjectOneContent.title}
+        content={ProjectOneContent.text}
+        section={ProjectOneContent.section}
+        graphic={ProjectOneContent.graphic}
+        graphicWidth={ProjectOneContent.graphicWidth}
+        graphicHeight={ProjectOneContent.graphicHeight}
         id="about"
       />
       <ContentBlock
         type="right"
         title={MissionContent.title}
         content={MissionContent.text}
-        icon="product-launch.svg"
+        graphic="product-launch.svg"
+        graphicWidth="100%"
+        graphicHeight="100%"
         id="mission"
       />
       <ContentBlock
         type="left"
         title={ProductContent.title}
         content={ProductContent.text}
-        icon="waving.svg"
+        graphic="waving.svg"
+        graphicWidth="100%"
+        graphicHeight="100%"
         id="product"
       />
       <Contact

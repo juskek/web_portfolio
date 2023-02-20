@@ -1,0 +1,19 @@
+{
+  "title": "Social Games",
+  "text": "Introducing my new mobile application - \"Social Games\" - the ultimate destination for anyone who loves to play social games with friends and family! With Social Games, you can join or create game rooms and invite your friends to play together in real-time.",
+  "graphic": "social_games.png",
+  "graphicWidth": "70%",
+  "graphicHeight": "70%",
+  "section": [
+    {
+      "title": "iOS App Store",
+      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Android Play Store",
+      "content": "Styled Components gives you total control over your components.",
+      "icon": "notes.svg"
+    }
+  ]
+}
