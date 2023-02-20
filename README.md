@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+![landy](https://user-images.githubusercontent.com/48876996/121569479-e179db80-ca31-11eb-8a48-9c3de9b142f3.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Landy React Template License](https://img.shields.io/github/license/Adrinlol/landy-react-template)
+![Landy React Template Release Date](https://img.shields.io/github/release-date/Adrinlol/landy-react-template)
+![Landy React TemplateStars](https://img.shields.io/github/stars/Adrinlol/landy-react-template)
+![Landy React Template Language](https://img.shields.io/github/languages/top/Adrinlol/landy-react-template)
+![Landy React Template TypeScript](https://badgen.net/npm/types/tslib)
 
-## Available Scripts
+## Free React landing page template
 
-In the project directory, you can run:
+[Landy][Landy] is an open-source React landing page template written in TypeScript, designed for developers and startups, who want to create a quick and professional landing page for their business or project.
 
-### `npm start`
+This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Free React landing page template](#free-react-landing-page-template)
+- [Table of contents](#table-of-contents)
+- [Features](#features)
+- [Google Lighthouse](#google-lighthouse)
+  - [Performance](#performance)
+  - [Accessibility](#accessibility)
+  - [Best Practices](#best-practices)
+  - [SEO](#seo)
+- [Demo](#demo)
+  - [Installation](#installation)
+  - [npx](#npx)
+- [What's included](#whats-included)
+- [Special thanks](#special-thanks)
+- [Usage](#usage)
+- [License](#license)
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your project will have everything you need to build a modern single-page React app:
 
-### `npm run build`
+- 🎁 **Modern** – Template created using the latest features of React (State management using Hooks, Code-Splitting to reduce the bundle size)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 💻 **Responsive** – Highly responsive and reusable UI components, that change depending on the provided props
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 🚀 **Fast** – Buttery smooth experience thanks to the implementation of best practices and no third party dependencies, resulting in <b>PERFECT</b> Google Lighthouse scores
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🏷 **TypeScript support** – Landy is written in TypeScript to improve the DX
 
-### `npm run eject`
+- 🌍 **Internationalization** - Prebuilt standalone file that works in every environment and doesn't require reloading the page to translate the content
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 🛸 **Routing** - Each file inside the src/pages directory will generate its own route, so you don't have to manually handle the routing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 🤙 **Contact Form** - Contact form written in React Hooks, with uncontrolled form validation to reduce unnecessary performance penalty. You just need to provide the endpoint
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- ⚙️ **Maintenance** - All of the content is stored in the JSON files, so that you can easily manage the content of the website
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Google Lighthouse
 
-## Learn More
+![1](https://user-images.githubusercontent.com/48876996/121569366-c313e000-ca31-11eb-940c-187f556ff0d6.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Google Lighthouse][Google Lighthouse] is an open-source, automated tool for measuring the quality of web pages. Google Lighthouse audits performance, accessibility and search engine optimization of web pages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Performance
 
-### Code Splitting
+Audits for metrics like first paint and time to interactive to determine lag.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Accessibility
 
-### Analyzing the Bundle Size
+Checks for common issues that may prevent users from accessing your content.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Best Practices
 
-### Making a Progressive Web App
+Looks for everything from HTTPS usage to correct image aspect ratios.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### SEO 
 
-### Advanced Configuration
+Checks for best practices to ensure your site is discoverable.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Check the live demo here 👉️ https://landy-web.netlify.app/
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Installation
+
+You’ll need to have Node 10.16.0 or later version on your local development machine (but it’s not required on the server). I recommend using the latest LTS version.
+
+To create a new app, you have to:
+
+### npx
+
+Use the following command 
+
+```sh
+npx create-react-app my-app --template adrinlol
+cd my-app
+npm start
+```
+
+## What's included
+
+- [axios][axios] - Promise based HTTP client for the browser and Node.js.
+- [antd][antd] - React UI library that contains a set of high quality components.
+- [react-awesome-reveal][react-awesome-reveal] - High performance library that adds reveal animations using the Intersection Observer API.
+- [styled-componets][styled-componets] - Variant on “CSS-in-JS”—which solves many of the problems with traditional CSS.
+- [i18next][i18next] - Internationalization-framework written in and for JavaScript.
+
+## Special thanks
+
+[whoooa][whoooa] - Use fantastic, handmade illustrations with easily changeable colors and different styles.
+
+## Usage
+
+Use it for whatever you want, and be sure to reach out to me on [Twitter](https://twitter.com/Adrinlolx) if you have any questions, or build something cool with it.
+
+## License
+
+Licensed under the MIT license.
+
+<!-- prettier-ignore-start -->
+[axios]: https://github.com/axios/axios
+[antd]: https://github.com/ant-design/ant-design
+[react-awesome-reveal]: https://www.npmjs.com/package/react-awesome-reveal
+[styled-componets]: https://github.com/styled-components/styled-components
+[i18next]: https://github.com/i18next/i18next
+[whoooa]: https://www.whoooa.rocks/
+[Landy]: https://www.npmjs.com/package/cra-template-adrinlol
+[Google Lighthouse]: https://developers.google.com/web/tools/lighthouse
+<!-- prettier-ignore-end -->
