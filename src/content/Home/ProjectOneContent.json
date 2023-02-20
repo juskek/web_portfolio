@@ -8,12 +8,12 @@
     {
       "title": "iOS App Store",
       "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
+      "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/appstore.svg"
     },
     {
       "title": "Android Play Store",
       "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
+      "icon": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/googleplay.svg"
     }
   ]
 }
