@@ -16,6 +16,8 @@ const RightBlock = ({
   content,
   button,
   graphicSrc,
+  graphicWidth,
+  graphicHeight,
   t,
   id,
 }: ContentBlockProps) => {
@@ -63,7 +65,7 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <GraphicAtom src={graphicSrc} width="100%" height="100%" />
+            <GraphicAtom src={graphicSrc} width={graphicWidth} height={graphicHeight} />
           </Col>
         </Row>
       </Fade>
