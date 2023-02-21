@@ -48,7 +48,7 @@ const Footer = ({ t }: any) => {
 
   return (
     <>
-      <FooterSection>
+      {/* <FooterSection>
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
@@ -126,7 +126,7 @@ const Footer = ({ t }: any) => {
             </Col>
           </Row>
         </Container>
-      </FooterSection>
+      </FooterSection> */}
       <Extra>
         <Container border={true}>
           <Row
@@ -146,25 +146,25 @@ const Footer = ({ t }: any) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                href="https://github.com/juskek"
                 src="github.svg"
               />
-              <SocialLink
+              {/* <SocialLink
                 href="https://twitter.com/Adrinlolx"
                 src="twitter.svg"
-              />
+              /> */}
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
+                href="https://www.linkedin.com/in/justinkek/"
                 src="linkedin.svg"
               />
               <SocialLink
-                href="https://medium.com/@lashakakabadze/"
+                href="https://justinkek.medium.com/"
                 src="medium.svg"
               />
-              <a href="https://www.buymeacoffee.com/adrinlol">
+              <a href="https://www.buymeacoffee.com/justinkek">
                 <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
-                  alt="Buy me a pizza"
+                  src="https://img.buymeacoffee.com/button-api/?text= Buy me KFC &emoji=🍗&slug=justinkek&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
+                  alt="Buy me KFC"
                 />
               </a>
             </FooterContainer>
