@@ -12,11 +12,18 @@
       "graphicHeight": "30%"
     },
     {
-      "title": "Play Store - Download",
+      "title": "Play Store - Early Access",
       "graphicSrc": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/googleplay.svg",
       "graphicWidth": "30%",
       "graphicHeight": "30%",
       "graphicOnClickSrc": "https://play.google.com/store/apps/details?id=tech.kek.socialgames.app"
+    }
+  ],
+  "button": [
+    {
+      "title": "Design Journey",
+      "onClickMode": "navigateTo",
+      "onClickDestination": "https://justinkek.medium.com/social-games-designing-developing-an-mvp-in-1-month-3e04cc3b1412"
     }
   ]
 }

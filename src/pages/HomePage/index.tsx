@@ -37,7 +37,8 @@ const Home = () => {
         graphicSrc={ProjectOneContent.graphicSrc}
         graphicWidth={ProjectOneContent.graphicWidth}
         graphicHeight={ProjectOneContent.graphicHeight}
-        id="about"
+        id={ProjectOneContent.title}
+        button={ProjectOneContent.button}
       />
       {/* <ContentBlock
         type="right"

@@ -4,6 +4,8 @@ import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
 import { GraphicAtom } from "../../common/GraphicAtom";
 import { Button } from "../../common/Button";
+import ProjectOneContent from "../../content/Home/ProjectOneContent.json";
+
 import {
   HeaderSection,
   LogoContainer,
@@ -37,8 +39,8 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo(ProjectOneContent.title)}>
+          <Span>{t(ProjectOneContent.title)}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Mission")}</Span>

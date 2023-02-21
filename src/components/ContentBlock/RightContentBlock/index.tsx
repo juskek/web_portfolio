@@ -36,7 +36,6 @@ const RightBlock = ({
       default:
         break;
     }
-  
   }
   return (
     <RightBlockContainer>

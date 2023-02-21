@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { GraphicAtom } from "../../common/GraphicAtom";
 import Container from "../../common/Container";
+import ProjectOneContent from "../../content/Home/ProjectOneContent.json";
 
 import i18n from "i18next";
 import {
