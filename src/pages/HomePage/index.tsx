@@ -2,6 +2,7 @@ import { lazy } from "react";
 import IntroContent from "../../content/Home/IntroContent.json";
 import ProjectOneContent from "../../content/Home/ProjectOneContent.json";
 import ProjectTwoContent from "../../content/Home/ProjectTwoContent.json";
+import ProjectThreeContent from "../../content/Home/ProjectThreeContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
@@ -50,6 +51,16 @@ const Home = () => {
         graphicHeight={ProjectTwoContent.graphicHeight}
         id={ProjectTwoContent.title}
         button={ProjectTwoContent.button}
+      />
+      <ContentBlock
+        type="left"
+        title={ProjectThreeContent.title}
+        content={ProjectThreeContent.text}
+        graphicSrc={ProjectThreeContent.graphicSrc}
+        graphicWidth={ProjectThreeContent.graphicWidth}
+        graphicHeight={ProjectThreeContent.graphicHeight}
+        id={ProjectThreeContent.title}
+        button={ProjectThreeContent.button}
       />
       {/* <ContentBlock
         type="right"
