@@ -1,0 +1,29 @@
+{
+  "title": "Social Games",
+  "text": "Introducing my new mobile application - \"Social Games\" - the ultimate destination for anyone who loves to play social games with friends and family!",
+  "graphicSrc": "social_games.png",
+  "graphicWidth": "70%",
+  "graphicHeight": "70%",
+  "section": [
+    {
+      "title": "App Store - Coming Soon",
+      "graphicSrc": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/appstore.svg",
+      "graphicWidth": "30%",
+      "graphicHeight": "30%"
+    },
+    {
+      "title": "Play Store - Early Access",
+      "graphicSrc": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/googleplay.svg",
+      "graphicWidth": "30%",
+      "graphicHeight": "30%",
+      "graphicOnClickSrc": "https://play.google.com/store/apps/details?id=tech.kek.socialgames.app"
+    }
+  ],
+  "button": [
+    {
+      "title": "Design Journey",
+      "onClickMode": "navigateTo",
+      "onClickDestination": "https://justinkek.medium.com/social-games-designing-developing-an-mvp-in-1-month-3e04cc3b1412"
+    }
+  ]
+}

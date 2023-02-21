@@ -1,0 +1,14 @@
+{
+  "title": "Honeycomb",
+  "text": "Honeycomb allows users to charge and store their e-scooters and e-bikes using proprietary smart charging algorithms and energy infrastructure.",
+  "graphicSrc": "honeycomb.png",
+  "graphicWidth": "100%",
+  "graphicHeight": "100%",
+  "button": [
+    {
+      "title": "Watch Demo",
+      "onClickMode": "navigateTo",
+      "onClickDestination": "https://www.youtube.com/"
+    }
+  ]
+}

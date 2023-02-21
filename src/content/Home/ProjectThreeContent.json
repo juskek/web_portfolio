@@ -1,0 +1,14 @@
+{
+  "title": "T2Diary",
+  "text": "A mobile app prototype for Type 2 Diabetics to manage their lifestyle.",
+  "graphicSrc": "t2diary.png",
+  "graphicWidth": "100%",
+  "graphicHeight": "100%",
+  "button": [
+    {
+      "title": "Try Prototype",
+      "onClickMode": "navigateTo",
+      "onClickDestination": "https://www.figma.com/proto/mKPjD8oujuOEN7HKPgFnhh/T2Diary?page-id=0%3A1&node-id=214%3A23&starting-point-node-id=214%3A23"
+    }
+  ]
+}
