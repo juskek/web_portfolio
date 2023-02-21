@@ -5,6 +5,8 @@ import Container from "../../common/Container";
 import { GraphicAtom } from "../../common/GraphicAtom";
 import { Button } from "../../common/Button";
 import ProjectOneContent from "../../content/Home/ProjectOneContent.json";
+import ProjectTwoContent from "../../content/Home/ProjectTwoContent.json";
+import ProjectThreeContent from "../../content/Home/ProjectThreeContent.json";
 
 import {
   HeaderSection,
@@ -42,15 +44,15 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo(ProjectOneContent.title)}>
           <Span>{t(ProjectOneContent.title)}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo(ProjectTwoContent.title)}>
+          <Span>{t(ProjectTwoContent.title)}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo(ProjectThreeContent.title)}>
+          <Span>{t(ProjectThreeContent.title)}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
+          onClick={() => window.open("https://www.linkedin.com/in/justinkek/")}
         >
           <Span>
             <Button>{t("Contact")}</Button>
