@@ -28,7 +28,7 @@ const RightBlock = ({
     });
   };
   const onClickSwitch = (onClickMode: string, onClickDestination: string) => {
-    switch(onClickMode) {
+    switch (onClickMode) {
       case 'navigateTo':
         window.open(onClickDestination);
         break;
@@ -43,7 +43,7 @@ const RightBlock = ({
     <RightBlockContainer>
       <Fade direction="right">
         <Row justify="space-between" align="middle" id={id}>
-          <Col lg={11} md={11} sm={11} xs={24}>
+          <Col lg={{ span: 11, order: 1 }} md={{ span: 11, order: 1 }} sm={{ span: 11, order: 1 }} xs={{ span: 24, order: 2 }}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
@@ -64,7 +64,7 @@ const RightBlock = ({
               </ButtonWrapper>
             </ContentWrapper>
           </Col>
-          <Col lg={11} md={11} sm={12} xs={24}>
+          <Col lg={{ span: 11, order: 2 }} md={{ span: 11, order: 2 }} sm={{ span: 12, order: 2 }} xs={{ span: 24, order: 1 }}>
             <GraphicAtom src={graphicSrc} width={graphicWidth} height={graphicHeight} />
           </Col>
         </Row>
