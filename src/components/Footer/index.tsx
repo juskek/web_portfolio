@@ -52,9 +52,28 @@ const Footer = ({ t }: any) => {
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Other Tech")}</Language>
+              <Language>{t("Tech")}</Language>
               <Large to={{ pathname: "https://youtube.com/shorts/iS_kTXIUcFI?feature=share" }} target="_blank">
                 {t("Embedded C Robot")}
+              </Large>
+              <Large to={{ pathname: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/31890240459949454299619204764924511709184426269098390716351490949695055855617" }} target="_blank">
+                {t("Line Racers NFT")}
+              </Large>
+              <Large to={{ pathname: "https://github.com/Kek-Tech/flutter_google_maps_widget_cluster_markers" }} target="_blank">
+                {t("Flutter Google Maps Widget Cluster Markers")}
+              </Large>
+              <Large to={{ pathname: "https://www.linkedin.com/feed/update/urn:li:activity:6980512375879696385/" }} target="_blank">
+                {t("Energy Superhub Oxford Data Pipeline")}
+              </Large>
+            </Col>
+            <Col lg={10} md={10} sm={12} xs={12}>
+              <Language>{t("Mechanical Engineering")}</Language>
+              <Large to={{ pathname: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6738060771831386112" }} target="_blank">
+                {t("Self Sanitising Button")}
+              </Large>
+              <Language>{t("Articles")}</Language>
+              <Large to={{ pathname: "https://justinkek.medium.com/alphabets-waymo-a-technical-study-on-autonomous-vehicle-tech-c128180ab2c5" }} target="_blank">
+                {"Waymo: A Technical Study on Autonomous Vehicle Tech"}
               </Large>
             </Col>
           </Row>
