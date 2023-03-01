@@ -6,13 +6,14 @@
   "graphicHeight": "70%",
   "section": [
     {
-      "title": "App Store - Coming Soon",
+      "title": "App Store",
       "graphicSrc": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/appstore.svg",
       "graphicWidth": "30%",
-      "graphicHeight": "30%"
+      "graphicHeight": "30%",
+      "graphicOnClickSrc": "https://apps.apple.com/gb/app/social-games/id1672537834"
     },
     {
-      "title": "Play Store - Early Access",
+      "title": "Play Store",
       "graphicSrc": "https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/googleplay.svg",
       "graphicWidth": "30%",
       "graphicHeight": "30%",
